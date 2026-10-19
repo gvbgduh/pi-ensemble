@@ -4,4 +4,5 @@ Dated source-analysis notes and experiment results live here. Preserve what was 
 
 - `index.md` — this map.
 - [Work-report intake](2026-10-19-work-report-intake.md) — chronology, implications and caveats for imported Argon evidence.
+- [Operator workflow experience](2026-10-19-operator-workflow-experience.md) — firsthand longitudinal cost, mental-load and throughput observations; separate from the single Argon analysis and controlled comparison.
 - [Jev smoke test](2026-10-19-jev-smoke.md) — successful authenticated synthetic codemode calls; [structured record](2026-10-19-jev-smoke.json).

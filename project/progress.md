@@ -107,6 +107,12 @@ Deliver a functioning runtime; current phase is evidence intake and concrete des
 - First useful slice is intentionally tool-restricted persistence/attachment/peer control; no false promise of safe general shell. Released dependency/auth compatibility, store lock, portable sandbox, admission/cutover fault tests and operator acceptance remain gates.
 - Concrete proposal is ready for pinned Astra architecture review. No runtime code or recovery experiment claimed; review findings/dispositions must remain independent of operator acceptance.
 
+### 2026-10-19 — Direct operator evidence clarification via Astra
+
+- Astra correlated a direct operator clarification back to the orchestrator during pinned review. Argon's report is one model's analysis; independent artifact intake is not a replicated raw-corpus analysis.
+- Recorded firsthand operator observations separately: earlier single Opus 5 ~$120–130/day versus later Opus 5.5 worker ~$20–30/day, Argon ~$10–15/day (different billing basis), flat-rate Kimi and Fable ~$7–12/day; lower mental load and roughly twice-faster results. Statistical/telemetry caveats qualify attribution, not dismiss experience. See the dated finding.
+- Proposal `ab0d906` remains unchanged during Astra review; no implementation authority is inferred.
+
 ## Handoff
 
 Use [continuation-prompt.md](continuation-prompt.md) for next actions and [variables.md](variables.md) for unresolved details. Preserve dated observations; promote current conclusions to product docs.
