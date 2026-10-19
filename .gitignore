@@ -1,0 +1,23 @@
+# Private imports, upstream research cache, and machine-local configuration
+.local/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Runtime state must never be published with the project
+.pi/
+state/
+logs/
+artifacts/
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
+
+# Build and dependency output
+node_modules/
+dist/
+coverage/
+.DS_Store
