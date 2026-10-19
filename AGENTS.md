@@ -4,7 +4,7 @@
 
 Deliver a functioning Pi Ensemble runtime: persistent agents, attachable interactive clients, independent contexts, coordinated autonomy, direct human access, and inspectable project state. Research, documentation, experiments, and review serve delivery; they are not the product.
 
-Current phase: design and source research. Do not confuse planned behavior with implemented guarantees, or change global Pi settings/install services merely as a side effect of documentation work.
+Current phase: design and source research. Do not confuse planned behavior with implemented guarantees, or change global Pi settings/install services merely as a side effect of documentation work. Treat metaphors as shorthand for intent, not extra literal architecture requirements.
 
 ## Read with purpose
 
@@ -21,6 +21,7 @@ Follow [project structure and reading protocol](docs/project-structure.md).
 - Update progress, open variables, decisions, PR/issue state, and continuation state as work changes—not only at session wrap.
 - Also update `README.md`, `AGENTS.md`, and affected `docs/` when actual behavior, conventions, navigation, or current understanding changes.
 - Preserve dated findings and session logs; supersede accepted decisions rather than silently rewriting them.
+- Tracker artifacts are optional tools, not a mandatory empty file set. Add issues/ticket/PR maps only when they carry useful external state; no requirement to use GitHub issues before they help.
 - Use isolated worktrees for parallel writers. Avoid concurrent edits to one shared document; separate proposal, review, and disposition artifacts.
 - Commit and push small coherent milestones often after inspecting the diff and checks. Do not wait for a giant final commit. No force-push or merge is implied.
 - Global memory holds cross-project preferences and pointers, not a second copy of project state.

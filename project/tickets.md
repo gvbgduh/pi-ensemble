@@ -1,6 +1,6 @@
 # Issue map
 
-No GitHub issues or external tickets have been created for this project. Work is currently tracked in [progress](progress.md); do not invent external IDs.
+Optional placeholder: this file is not required for a project or the runtime. No GitHub issues or external tickets have been created for this project. Work is currently tracked in [progress](progress.md); do not invent external IDs.
 
 | Work | External issue | State |
 | --- | --- | --- |

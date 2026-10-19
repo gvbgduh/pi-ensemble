@@ -47,7 +47,9 @@ Source packages and tests are intentionally absent today. Add their layout when 
 
 ## Tracker backbone and hierarchy
 
-Use the legacy workflow's predictable tracker backbone: `README.md`, `index.md`, `progress.md`, `decisions.md`, `variables.md`, `tickets.md`, `prs.md`, and `continuation-prompt.md`. Empty external maps explicitly say none exist; never fabricate issue or PR IDs.
+The documented artifact set is a toolkit, not a requirement to create every file. Start with the smallest useful goal/current-work/handoff set and add decision, variable, evidence, and review artifacts when they carry real information. The outlines below describe how each artifact works **when used**.
+
+Issue/ticket and PR maps are optional: create/use them when there are real GitHub issues, PRs, or meaningful external dependencies to track. Do not open issues merely to fill a template or fabricate external IDs. The current `tickets.md` is a harmless placeholder and may stay until issue tracking is useful; it is not a mandatory runtime/project artifact.
 
 Create subtrackers only for independently substantial workstreams. A subtracker lives under `project/<workstream>/`, links its parent/siblings, and carries its own backbone as needed. Small tasks stay in a table, not a new directory forest. Each directory has an `index.md` navigation map. Context links should identify purpose and authority rather than copy parent text.
 
@@ -67,7 +69,7 @@ Use predictable sections, not a growing stream of unrelated notes. A document ha
 | Progress | Current phase/workstream table with state/next action → append-only dated milestone log → current handoff link |
 | Decisions | ID/name/status index → accepted entries with context/evidence/trade-off → explicit supersession links; substantial ADRs can be linked separately |
 | Variables | Stable ID → question/options/impact → owner or next evidence → current state; resolved items link a decision rather than disappear unexplained |
-| Tickets / PRs | External ID/link → owner/scope → current verified state → dependencies/reviewed revision → last known evidence; explicitly say none if empty |
+| Tickets / PRs (optional) | When external tracking is useful: ID/link → owner/scope → current verified state → dependencies/reviewed revision → last known evidence. No requirement to create an empty map. |
 | Continuation | Small common goal/current authority core → per-logical-agent focus with current state/next bounded task/acceptance → blockers/decisions/effect hazards → driver/result route and revisioned pointers. Refresh rather than append indefinitely; split into linked per-agent files if large. |
 | Findings / reports | Date/revision and question → method/coverage → observations/evidence → interpretation/confidence/counterexamples → implications/next test |
 | Review | Proposal revision/scope/questions → independent prioritized findings → evidence/failure scenario → author dispositions in a separate artifact → acceptance/residual risk |
