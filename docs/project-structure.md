@@ -21,6 +21,8 @@ pi-ensemble/
 │   ├── architecture-options.md
 │   ├── pi-durable.md         # substrate explained, with diagrams
 │   ├── project-structure.md  # this convention
+│   ├── context-lifecycle.md  # context budgets and proposed rollover contract
+│   ├── task-contract.md      # bounded tasks/continuations and horizontal allocation
 │   ├── decision-models.md
 │   ├── observability.md
 │   └── reference/
@@ -86,6 +88,10 @@ Layer from project goal to workstream to bounded task. Keep top-level summaries 
 | Status report | Current tracker tables, continuation, cheap live Git/remote checks | History only to explain deltas |
 
 Do not read all chronology before every task. Verify live state before acting on stale tracking. A source artifact can establish an observation without becoming current policy.
+
+Budget context per role/incarnation and use bounded retrieval. Keep common project context compact; allow necessary independent evidence checking without duplicating entire histories. Before a conversation becomes too large, prepare a compact handoff and safely replace the incarnation behind its logical address. See [context lifecycle](context-lifecycle.md); this must preserve live ownership and routing, not only prose.
+
+Project Markdown is a reusable knowledge substrate for bounded worker tasks, not material to paste into every worker. A continuation is a new scoped work item with verified progress/remaining acceptance and revisioned pointers, not the cumulative transcript. See [task contract](task-contract.md).
 
 ## Update and promotion rules
 

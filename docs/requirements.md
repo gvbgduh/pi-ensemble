@@ -42,6 +42,7 @@ Status: current target, updated with operator clarifications on 2026-10-19. Thes
 | R19 | Attribute usage, elapsed time, failures, review outcomes, and human interventions to roles/work items. Correlate decisions, predictions, actions, steering, verification, and eventual outcomes using a portable event contract usable from Pi, codemode, and the Durable host. Native totals alone are insufficient; preserve unknowns and cost provenance. |
 | R20 | Compare a single-agent baseline, the current multi-session workflow, and the proposed system on the same bounded tasks; more agents is not inherently better. |
 | R21 | Evaluate adviser quality using independently checkable evidence and seeded flaws, not agreement among agents or a classifier alone. |
+| R37 | Guard classifier question integrity: neutral versioned templates, balanced criteria, observations separated from interpretations, relevant counterevidence/missingness, and no caller expected-answer leakage when seeking an independent signal. Measure framing sensitivity with controlled paraphrase/polarity/label tests and independent outcomes; never reword/cherry-pick until Jev confirms the caller. Unknown evidence cannot become forced certainty. |
 
 ## Deployment and decision models
 
@@ -59,6 +60,19 @@ Status: current target, updated with operator clarifications on 2026-10-19. Thes
 | R26 | Work autonomously within evidence and granted authority. When consequential ambiguity, conflicting instructions, missing requirements, or a decision outside authority remains unresolved, persist and surface a decision request to the right owner rather than assume. Pause affected work, allow independent work to continue, and record resolution/revision. |
 | R27 | Surface the question, evidence, options, impact, and blocked scope with the decision request. Timeouts must not manufacture consent. Favor preventing throwaway work over uninterrupted execution or cache retention; measure late clarification, drift, and avoidable rework. |
 | R28 | Development and runtime-supported project workflows distinguish current product/project knowledge from dynamic tracking/history. Keep milestone state and handoff current, preserve evidence/decision history, and let agents load only relevant slices. The repository convention is a template, not a mandatory layout for all user projects. |
+
+## Context distribution and lifecycle
+
+| ID | Requirement |
+| --- | --- |
+| R29 | Keep working context distributed by responsibility with minimal unnecessary overlap. Aim below 300K normally; select an upper budget within the operator's 300–400K range and never above 400K or a smaller model's usable window. Count system/tools, history, cached tokens, attachments/steering, bounded tool growth, and output/control/handoff reserves. |
+| R30 | Predict context growth and start wind-down before exhaustion. Stop admitting new substantive work to a draining incarnation, reach a safe checkpoint, and create/validate a compact successor briefing. Do not abruptly interrupt mutation or silently discard uncertain effects to meet a token threshold. |
+| R31 | Preserve stable logical agent addressing across conversation/incarnation replacement, with explicit routing epochs and one active mutation owner. Reconcile accepted/in-flight messages, tasks/children, decisions/approvals, direct human steering, and late results; notify drivers/clients and reject or redirect stale handles. |
+| R32 | Verify handoff fidelity against authoritative artifacts/current workspace and operation state before activation. Keep old context inspectable but do not load the entire transcript into the successor by default. Measure peak context, overlap signals, rollover failures, and post-handoff correction/rework. |
+| R33 | Subject context thresholds, rollover primitives, handoff validation, ownership fencing, and routing-cutover failure modes to explicit Astra review and acceptance tests. The operator's budget/continuity constraints are requirements; the detailed [lifecycle proposal](context-lifecycle.md) is not yet settled or implemented. |
+| R34 | Allocate bounded tasks using the relevant working set, current worker context, expected growth/reserves, dependencies, and workspace/budget capacity. Split scope or use suitable fresh/additional workers before contexts inflate; do not copy giant parent/sibling histories. The coordinator's own context also stays bounded. |
+| R35 | Task briefs are sufficiently self-contained through concise intent/scope/acceptance, explicit authority/ownership, and revisioned project-MD/artifact pointers. Unfinished work is an explicit bounded continuation work item with verified progress, remaining criteria, pending effects/decisions, and predecessor lineage—not accumulated instructions or recursively concatenated summaries. |
+| R36 | Horizontal splits/reassignment and incarnation rollover have distinct routing transitions. Track work-item/assignment revision, current logical assignee, driver/result destination, child aggregation, and late-result provenance. Reassignment must not duplicate effects, create multiple writers, erase authority limits, or lose steering/acceptance lineage. See [task contract](task-contract.md). |
 
 ## Not assumed
 

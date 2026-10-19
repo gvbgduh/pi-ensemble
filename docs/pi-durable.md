@@ -87,7 +87,7 @@ The receipt means admission, not success. A busy conversation can accept a steer
 
 The analogy is about ownership and attachment, not literal PTYs. Pi Durable does not itself provide an `ensemble attach` command. If the host process is not running, work is not magically progressing: the host/supervisor must restart, reopen storage, reinstall the needed definitions, and resume scheduling.
 
-Task completion must be separate from agent retirement. An idle agent can remain addressable for questions and adjustments without paying for continuous model turns. Context may eventually be compacted or handed off; persistence is not an infinite model window or a promise of everlasting provider prompt-cache hits.
+Task completion must be separate from agent retirement. An idle agent can remain addressable for questions and adjustments without paying for continuous model turns. Context should be budgeted and eventually compacted or handed off; persistence is not an infinite model window or a promise of everlasting provider prompt-cache hits. Ensemble must design [context wind-down and replacement](context-lifecycle.md) separately: stable logical addresses, compact verified briefings, and safe rerouting are not automatic consequences of persisted transcripts.
 
 ## Restart and external effects
 

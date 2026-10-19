@@ -24,7 +24,7 @@ Initially another Pi session reviews shared versioned Markdown. Once Ensemble ca
 
 1. `README.md`, `docs/requirements.md`, and `docs/project-structure.md`.
 2. Concrete proposal revision and acceptance criteria (to be written).
-3. `docs/pi-durable.md`, `docs/architecture-options.md`, `docs/decision-models.md`, `docs/observability.md`.
+3. `docs/pi-durable.md`, `docs/architecture-options.md`, `docs/context-lifecycle.md`, `docs/task-contract.md`, `docs/decision-models.md`, `docs/observability.md`.
 4. `project/research/sources.md`, relevant findings/experiments, and any received work-setup report.
 5. `docs/reference/pi-setup-legacy.md` and sanitized skill contracts as needed.
 
@@ -39,6 +39,31 @@ Do not request raw private sessions or credentials. Missing public-safe evidence
 - Is there one replay/admission authority, or a second scheduler/queue duplicating Durable? What did Cloudflare/community integrations teach, and which notes are stale?
 - Is the local host portable and future-client-friendly without prematurely requiring cloud networking/sync?
 - Can the operator select layouts/counts/roles without runtime code changes? Is a coordinator optional/configurable rather than structurally mandatory?
+
+### Context wind-down and replacement — explicit operator-requested review
+
+- Does the budget account for full model input (including cached tokens, prompt/tools, attachments, steering, and tool growth) plus output/control/handoff headroom? Are normal targets below 300K and ceilings no higher than 300–400K or the model's smaller usable limit?
+- Are the proposal's illustrative early thresholds sensible given actual work traces? Can a writer checkpoint safely without abrupt interruption or a last-minute giant summarization?
+- Is minimal overlap compatible with independent verification? Does the successor receive bounded, authoritative context rather than the entire old transcript or an unverified narrative?
+- Should rollover use compaction, reset/handoff, or a new incarnation for each case? Which native primitives are verified, and which routing/ownership policy is application work?
+- How is handoff fidelity checked, including hidden assumptions, rejected approaches, human steering, exact workspace state, approvals, children, and unresolved external effects?
+- Can stable logical addresses reroute safely with one active owner? Does an epoch fence cover real mutations/in-flight tools, not only a database pointer?
+- What happens when messages race cutover, an old handle submits, a late reply arrives, the driver changes, or the host crashes on either side of activation? Are admission, completion, and model compliance kept distinct?
+- Can a failed successor or rollback restore an old owner only after reconciling both incarnations' effects? Is the safe fallback a visible blocked state rather than two writers?
+- Which deterministic/fake-provider fault tests and post-handoff correction metrics would falsify the design?
+
+Treat [context lifecycle](../../docs/context-lifecycle.md) as a proposal to challenge, not a ratified implementation contract.
+
+### Horizontal allocation and task-shaped continuation
+
+- Does the driver distribute bounded working sets before an agent grows toward a million-token prompt, and keep its own dependency/outcome map compact?
+- Are tasks self-contained enough through scope/acceptance and revisioned project-MD pointers without embedding the project history or hundreds of mandatory references?
+- Is unfinished work a bounded continuation work item with verified progress, remaining criteria, unresolved effects/decisions, and lineage—not concatenated earlier summaries?
+- Do rollover, splitting, and reassignment have distinct identity/routing transitions? Can task assignments and result routes remain unambiguous when several workers share a role?
+- Do stale docs, concurrent steering, late replies, failed handoffs, and writer leases prevent unsafe dual ownership or duplicate effects across horizontal workers?
+- Is more parallelism justified by task independence, context distribution, and verification capacity, rather than agent count alone? What measured overhead or lost context would falsify the approach?
+
+Review [task contract](../../docs/task-contract.md) together with rollover, not as an unrelated future feature.
 
 ### Direct steering without drift
 
@@ -70,6 +95,8 @@ Do not request raw private sessions or credentials. Missing public-safe evidence
 - Can adapters support ordinary Pi and Durable without pretending to observe uninstrumented calls or know ground truth automatically?
 - Are unknown cost, absent labels, disagreement, interruptions, and telemetry failure represented honestly? Do retries count charges without duplicate logical events?
 - Are safety authorization and deterministic verification kept separate from probabilistic advice?
+- Can LLM-authored questions/criteria or selective input evidence encode the desired answer and make Jev mirror the caller? Are neutral versioned rubrics, observation/interpretation separation, counterevidence/unknowns, caller-baseline blinding, and independent labels practical and enforced where needed?
+- Do controlled paraphrase/polarity/label tests reveal unjustified framing sensitivity without confusing changed semantics with bias? Are ad hoc prompts marked unvalidated and unfavorable calls preserved rather than reworded/cherry-picked?
 
 ### Evidence and delivery
 

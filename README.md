@@ -20,6 +20,8 @@ When an ambiguity or consequential decision cannot be resolved from evidence and
 - [Requirements](docs/requirements.md) — the current behavioral target
 - [Architecture direction and alternatives](docs/architecture-options.md)
 - [Project structure and reading protocol](docs/project-structure.md)
+- [Context lifecycle](docs/context-lifecycle.md) — budgets, wind-down, handoff, and stable-address replacement (proposed)
+- [Bounded task contract](docs/task-contract.md) — project substrate, continuation tasks, horizontal workers, and routing (proposed)
 - [Legacy workflow](docs/reference/pi-setup-legacy.md) — reformatted, sanitized reference
 - [Decision models](docs/decision-models.md) — Jev integration and secure access
 - [Observability](docs/observability.md) — portable measurement, beyond native token totals

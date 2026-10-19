@@ -53,12 +53,19 @@ Proposed; **none have run yet**. Start with a fake provider, isolated temporary 
 | E13 | Human redirects worker while dependent work is queued/running | Correlated durable driver update, plan reconciliation, stale work visible, no echo loop. |
 | E14 | Consequential ambiguity with absent owner/timeout | Durable question blocks affected scope only; timeout is not consent. |
 | E15 | Jev through Pi/codemode and Durable, then delayed labels | Comparable decision/action/outcome records; attempts and costs remain accurate. |
+| E16 | Near-limit agent drains and briefs a replacement | Bounded verified handoff preserves decisions/work/authority without full-transcript inheritance; smaller model budgets and reserves work. |
+| E17 | Messages, human steering, child results, and host crash race routing cutover | One active writer; no silent dropped/duplicated admission; stale handles/results remain attributable; failed activation/rollback blocks safely. |
+| E18 | Bounded tasks and continuations distributed across independent workers | Project-MD pointers suffice without parent transcript inheritance; continuation size stays bounded over many passes; driver context stays small. |
+| E19 | Split/reassign work while steering/results are in flight | Assignment-aware routes preserve acceptance lineage, aggregation, authority, and one mutation owner; no ambiguous worker broadcast or repeated effects. |
+| E20 | Leading and neutral Jev questions, controlled paraphrase/polarity/label variants, labeled counterexamples | Caller expectation is not evidence; framing sensitivity and unknowns are visible; no favorable-result selection or spurious independent-validation claims. |
 
 Prioritize experiments that could change the architecture; defer others explicitly rather than requiring a full product before its design review.
 
 ### 6. Jev integration and measurement
 
 Follow [decision models](../../docs/decision-models.md) and [observability](../../docs/observability.md). Direct TypeSafe Jev is selected; use it after secure provisioning without reopening adoption. Native totals are insufficient: design a reusable recording core and adapters for supported paths. Local Laya is not required.
+
+Context distribution, early wind-down, handoff validation, and stable-address rerouting are explicit Astra review topics, not solved by simply enabling compaction. Review the [lifecycle proposal](../../docs/context-lifecycle.md) and use work-session evidence to calibrate budgets and failure tests.
 
 ### 7. Independent review and delivery
 

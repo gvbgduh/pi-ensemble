@@ -26,6 +26,11 @@ Use models/Jev only if already authorized in the work environment. Do not send p
 - When did retained context enable an explanation or adjustment? When was a useful agent no longer reachable, and what was actually lost versus recoverable from a session file?
 - How were bounded subagents and persistent peers used differently? What current package resume/inspection features were used, missed, unavailable, or ineligible?
 - What happened after compaction, restart, model changes, or offline gaps? Which artifacts made recovery work?
+- Where did prompt context approach or exceed the desired 300–400K upper range? Distinguish actual request context from cumulative billed tokens; report unknowns rather than reconstruct exact counts without data.
+- How was context distributed, and which repeated source/transcript loads were wasteful versus necessary independent verification?
+- When an agent was wound down/replaced, what briefing survived, which decisions or unfinished work were lost, and how did peers/driver discover the new address? Trace late replies, old handles, dual ownership, and post-handoff correction where observable.
+- Which task/continuation briefs were bounded and sufficiently self-contained using shared project Markdown? Where did next-step instructions, required reads, or recursively concatenated summaries inflate worker context?
+- When did fresh/additional workers improve distribution versus duplicate history? Trace work-item assignments, dependency/aggregation ownership, rerouting, and late replies rather than assume a role name is a unique worker address.
 
 ### Direct interaction and alignment
 
@@ -53,6 +58,7 @@ Use models/Jev only if already authorized in the work environment. Do not send p
 
 - What usage/cost/outcome data exists, and what cannot be reconstructed? Separate provider-reported values, estimates, and missing values.
 - Where were Jev/Laya invoked, with what question/rubric, action, and eventual label? Were they useful beyond agreement with the primary agent?
+- Did question wording, loaded criteria, selective state, or the primary agent's expected answer bias the classifier toward agreement? Look for neutral/counterexample cases and repeated rewording after an unfavorable answer. Do not treat confidence or agreement as proof of independence.
 - What IDs/events would have made attribution easy across agent, work item, decision, steering, verification, and rework?
 
 ## Per-episode extraction template

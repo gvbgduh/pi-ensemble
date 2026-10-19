@@ -9,7 +9,7 @@ Deliver a functioning runtime; current phase is evidence intake and concrete des
 | Product/tracker foundation | Updated with operator review | Keep README, AGENTS, docs and tracker aligned |
 | Work-setup evidence | Analysis brief prepared; report not received | Operator shares brief with work agent; optional sanitized skills/templates |
 | Substrate/ecosystem | Official Pi and latest legacy/Cloudflare docs partially read | Complete normative/source/tests comparison; inspect community implementations |
-| Host/client design | C preferred; D optional | Concrete ownership, attachment, steering-alignment and ambiguity contracts |
+| Host/client design | C preferred; D optional; context-rollover proposal added | Concrete ownership, attachment, steering/ambiguity and context-replacement contracts |
 | Jev and measurement | Direct TypeSafe selected; secure key not configured | Provision private credentials; implement portable decision/outcome recording |
 | Independent review | Brief expanded; no review yet | Highlight the Astra milestone when concrete design/evidence are ready |
 
@@ -54,6 +54,21 @@ Deliver a functioning runtime; current phase is evidence intake and concrete des
 - Confirmed Astra via OpenAI subscription inside Pi. Manual review coordination is bootstrap-only, not a ritual or a permanent dependency on the human relay.
 - Added direct-steering notification/reconciliation and consequential-ambiguity/decision-owner requirements, including affected-scope blocking and prevention of throwaway work.
 - Read Cloudflare's Pi harness guide, example README/notes, and official Cloudflare example README. Notes include older limitations; version comparison is required. Latest subagents docs describe retained-child resume; no runtime behavior was tested.
+
+### 2026-10-19 — GitHub tracker terminology and bounded context lifecycle
+
+- Used `project/prs.md` for GitHub, removing the legacy MR filename from current conventions. Expanded `docs/project-structure.md` with per-file outlines, layering, selective reads, and maintenance rules.
+- Committed/pushed the documentation/tracker split and operator feedback as `ee44b33`; current product/runtime implementation status remains explicit.
+- Added `docs/context-lifecycle.md`: proposed early wind-down, bounded verified successor briefing, logical-address/incarnation separation, routing epochs, mutation ownership, pending/late-work reconciliation, failure/rollback cases, and metrics.
+- Captured the operator's frugal distributed-context constraint: normal target below 300K; ceilings no higher than the 300–400K upper range or smaller model limits with reserves. Example thresholds are unreviewed, not implemented defaults.
+- Explicitly added rollover/handoff/routing to the Astra brief, work-setup analysis brief, requirements, open variables, and planned fault experiments. No Astra review or rollover experiment has run.
+- Operator connected rollover with horizontal worker allocation. Added `docs/task-contract.md`: bounded self-contained tasks using project Markdown, explicit continuation items, pre-dispatch context-fit checks, compact coordinator state, and assignment-aware rerouting distinct from incarnation replacement. Added corresponding Astra questions and tests; no implementation is claimed.
+
+### 2026-10-19 — Classifier question-integrity constraint
+
+- Operator highlighted the risk that Jev merely confirms bias already encoded in LLM-authored questions/criteria/state.
+- Added neutral versioned rubrics, observation/interpretation separation, expected-answer leakage prevention, counterevidence/unknown handling, controlled framing tests, and independently labeled outcomes to integration/metrics/requirements and Astra review.
+- Added an explicit experiment and work-session analysis question. No claim of validated neutrality or performed classifier testing.
 
 ## Handoff
 

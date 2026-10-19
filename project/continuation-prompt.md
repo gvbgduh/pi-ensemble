@@ -12,9 +12,13 @@ Start with `AGENTS.md`, `docs/project-structure.md`, the current table in `proje
 
 - Prefer a Pi Durable host with attachable clients (C); Pi CLI adapter (D) is optional later.
 - Local and portable first, future remote clients considered. No fixed agent count/topology.
-- Task completion must not destroy agent context. Direct steering must notify the driving agent and reconcile dependent plans without requiring an orchestrator hop.
+- Task completion must not destroy useful agent context. Direct steering must notify the driving agent and reconcile dependent plans without requiring an orchestrator hop.
+- Contexts must be frugal/distributed with minimal unnecessary overlap: aim below 300K normally, ceilings no higher than the 300–400K upper range or smaller model limits with reserves. Early wind-down and compact verified handoff should preserve logical addresses across incarnations. `docs/context-lifecycle.md` is a proposal for explicit Astra review, not implemented defaults.
+- Horizontal allocation and rollover share compact task/handoff contracts but have distinct routes. Use bounded self-contained work items and revisioned project-MD pointers; unfinished work becomes a continuation task, not expanding instructions/full history. Track task assignment/lineage and result destination. See `docs/task-contract.md`.
+- GitHub tracker is `project/prs.md`. `docs/project-structure.md` defines file outlines, layers, selective reading, and maintenance.
 - Escalate consequential uncertainty rather than confidently guess; preserve unaffected parallel work.
 - Jev is selected through direct TypeSafe API access, including codemode. Operator-reported price: $0.042/M input tokens, zero output price. Secure key provisioning is still needed; no key in chat/Git/argv.
+- Jev must not mirror an LLM-authored leading question. Use neutral versioned rubrics, separate observations from interpretations, omit caller expected answers from classifier evidence, retain counterevidence/unknowns, and test framing sensitivity against independent labels. No rewording until the desired result.
 - Astra is used via an OpenAI subscription in another Pi session initially. Use separate review artifacts; flag the review milestone explicitly, then use Ensemble itself when safely possible.
 - MIT accepted. Legacy package baseline is latest, with inspected SHAs recorded.
 
@@ -22,7 +26,7 @@ Start with `AGENTS.md`, `docs/project-structure.md`, the current table in `proje
 
 1. Give the operator `project/research/work-setup-analysis-brief.md`; accept a sanitized report and optional project/status/spin-up skills/templates. Raw sessions stay at work.
 2. Continue source comparison: pinned official Pi/Cloudflare examples and SDK, latest legacy packages, and community applications. Verify dated notes against current APIs rather than copying stale limitations.
-3. Complete the concrete host/client, ownership, steering-update, ambiguity, and observability design with evidence and high-risk spikes.
+3. Complete the concrete host/client, ownership, steering-update, ambiguity, context-rollover/routing, and observability design with evidence and high-risk spikes. Test cutover races, handoff omissions, stale handles, late results, and failed activation/rollback.
 4. Provision Jev through supported private credential storage and exercise it; implement portable decision/outcome metrics, not just token counters. Review Pi setup/security docs before changing global configuration.
 5. Highlight the Astra review handoff when the design is ready; independent review and operator acceptance precede committing to consequential runtime architecture.
 

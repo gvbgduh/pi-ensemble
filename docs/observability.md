@@ -30,9 +30,9 @@ Names/fields are design vocabulary, not an implemented API.
 
 | Group | Required information |
 | --- | --- |
-| Identity | Event ID, schema version, timestamp, project/agent/work-item IDs, conversation/run/task references where available |
+| Identity | Event ID, schema version, timestamp, project/logical-agent/incarnation/work-item IDs, routing epoch, conversation/run/task references where available |
 | Correlation | Decision ID, trace/causation IDs, input/action revision, attempt ID; stable idempotency identity separate from execution attempt |
-| Question | Purpose, criteria/rubric ID and revision, safe input reference/hash, provider/model/returned revision when available |
+| Question | Purpose, question/template and criteria/rubric IDs/revisions/provenance, ad hoc/validated status, safe evidence reference/hash and missingness, provider/model/returned revision when available |
 | Prediction | Typed answer, probabilities/confidence where provided, abstention/error/unavailable status |
 | Action | Recommendation versus actual action, actor/authority, override/steering reason, coordinator notification/acknowledgment |
 | Resources | Reported input/output tokens, duration, retries, actual/reported/estimated/unknown cost, rate and provenance |
@@ -46,10 +46,12 @@ Keep the record useful without embedding secrets or raw source. Hashes are corre
 
 - **Cost/latency:** reported usage, rate-based estimates, unknowns, provider reconciliation, time waiting versus working.
 - **Decision quality:** labeled confusion, false reassurance, false positives, abstention, calibration only with enough appropriate labels.
+- **Question integrity:** framing sensitivity across controlled paraphrase/polarity/label variants, expected-answer leakage, selective/missing evidence, rubric changes and independently labeled counterexamples. Keep the caller baseline in evaluation records, not in the classifier evidence. Neutrality is not proven by agreement or confidence.
 - **Incremental contribution:** what changed because of Jev/adviser versus deterministic/agent baseline; correlation is not a causal result.
 - **Steering/drift:** redirects, notification lag/failure, stale-plan work, dependent tasks invalidated.
 - **Escalation:** ambiguous decisions surfaced early versus late; justified requests versus unnecessary human interruption.
 - **Rework:** completed work kept, amended, or thrown away; attributable reasons and affected scope, with uncertainty rather than fabricated dollar savings.
+- **Context lifecycle:** measured/estimated peak and growth, request headroom, artifact reload/overlap signals, handoff size, rollover duration/validation, routing errors, and post-handoff correction. Cached tokens still occupy context; aggregate billed tokens do not by themselves measure current prompt size.
 
 Outcome labels may arrive later. Append assessment/correction events rather than silently replacing the original prediction. Agreement between agents is not an independent label; tests, human adjudication, and external results should identify their provenance too.
 
@@ -69,5 +71,6 @@ Outcome labels may arrive later. Append assessment/correction events rather than
 4. A human disagrees with Jev and later evidence resolves the disagreement; reports preserve all stages.
 5. Direct human steering updates the driver and invalidates affected work; notification lag and discarded work are measurable.
 6. An uninstrumented path is reported as a coverage gap, never advertised as universal completeness.
+7. A leading caller-authored question is identified as unvalidated; neutral controlled variants and independently labeled counterexamples reveal framing sensitivity. Unfavorable results remain recorded rather than rephrased away.
 
 See [decision-model integration](decision-models.md) and [requirements](requirements.md).

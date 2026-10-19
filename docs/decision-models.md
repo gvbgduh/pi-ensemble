@@ -9,7 +9,7 @@ No Jev calls have been made from this project yet, and no credential has been co
 ## Access and pricing
 
 - Provider route: `typesafe`; documented model alias: `jev-latest`. Resolve actual catalog availability rather than assuming an alias is a fixed model revision.
-- Operator-reported rate: **$0.042 per million input tokens; $0 output tokens**. Track rate source, effective date, and model/version; this has not been independently checked against an invoice/provider price page.
+- Operator-reported rate: **$0.042 per million input tokens; $0 per million output tokens**. Track rate source, effective date, and model/version; this has not been independently checked against an invoice/provider price page.
 - At that rate, $5 corresponds to about **119 million input tokens**, before any other charges or price changes. This is cost arithmetic, not permission to consume an account balance.
 - Native Pi cost totals may report zero when catalog pricing is absent. Apply the explicit rate as a clearly labeled estimate; reconcile actual billing separately.
 - Use Jev actively and economically; do not turn every useful call into another procurement discussion. Bound retries/concurrency and track cumulative use rather than assume cheap means unbounded.
@@ -42,9 +42,24 @@ Public/synthetic state is sufficient for initial use. Sending workplace state la
 
 Use deterministic checks for deterministic facts. Jev may advise whether to escalate; it must not suppress a required human gate or authorize a privileged action. A classifier can be confidently wrong.
 
+## Question integrity: avoid laundering the caller's bias
+
+Jev is not an independent check if its question/state already encode the LLM's expected conclusion. A confident result can reflect leading wording, selective evidence, loaded labels, or a rubric designed to endorse the caller—not a useful second signal.
+
+- Prefer **neutral, versioned question templates and criteria** for recurring decisions, reviewed independently of the particular outcome the caller wants.
+- Separate observable facts, quoted requirements, and artifact evidence from agent interpretations. Do not present "the fix is obviously correct" or "the risky change" as input facts. Include relevant counterevidence and disclose missing evidence.
+- Keep the agent's proposed answer/expectation out of the classifier request when using Jev as an independent signal. Record that baseline separately for later comparison, not inside the evidence Jev receives.
+- Use balanced, specific alternatives and comparable criteria. Do not make one choice richly justified and the others straw men. A loaded question cannot be repaired merely by neutral label names.
+- Treat insufficient evidence explicitly. Where the task permits, use a choice including unknown/needs-decision; a boolean answer alone has no native third state. An adapter may abstain before classification or on a documented policy, rather than force absence of evidence into false certainty.
+- Version question/criteria changes. Do not rephrase repeatedly until the desired label appears or silently select the favorable result.
+- Before relying on a recurring consequential rubric, test **meaning-preserving paraphrases, label/order variations, and reversed polarity with correctly mapped outcomes**, plus independently labeled positive/negative/insufficient-evidence cases. Separate legitimate semantic changes from framing sensitivity. Small wording variants need not have identical probabilities, but large unjustified flips need investigation.
+- Independent rubric review and outcome labels matter more than the caller or Jev certifying its own neutrality. Lints can detect some leading terms/answer leakage; they cannot prove absence of bias.
+
+Use this discipline without turning every cheap call into a committee review: maintain a small set of tested templates, and flag ad hoc or materially changed questions as unvalidated. A probabilistic advisor still never grants authority.
+
 ## Measuring its contribution
 
-Follow [observability](observability.md). Record the decision's purpose and criteria revision, predicted answer/probabilities, what the agent would otherwise have done, action actually taken, independent eventual outcome, latency, usage, and cost provenance. Unknown outcomes remain unknown.
+Follow [observability](observability.md). Record the decision's purpose and criteria revision, predicted answer/probabilities, what the agent would otherwise have done, action actually taken, independent eventual outcome, latency, usage, and cost provenance. Unknown outcomes remain unknown. Record template/criteria revision and provenance, ad hoc status, evidence selection/missingness, and framing-test results where available. Agreement with the caller after a leading prompt must not be counted as independent validation.
 
 Compare ordinary and difficult cases; review misses and disagreements. Agreement with the agent is not proof of added value, and disagreement is not proof Jev is right. Additive benefit, false reassurance, escalation quality, and avoided rework are more useful than call counts alone.
 
