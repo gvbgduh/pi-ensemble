@@ -33,7 +33,7 @@ Operator confirmed these package identities and requested latest, not an audit b
 | ID | Source | Snapshot and inspection |
 | --- | --- | --- |
 | S6 | [pi-subagents README](https://github.com/nicobailon/pi-subagents/blob/95683a4427e1e4af8de03f1a9ca03ec4c2799b73/README.md) | `95683a4427e1e4af8de03f1a9ca03ec4c2799b73`; README read in full. |
-| S7 | [Subagents tool reference](https://github.com/nicobailon/pi-subagents/blob/95683a4427e1e4af8de03f1a9ca03ec4c2799b73/docs/tool-reference.md) | Same revision; read in full. Documents retained-child resume and steering/receipt/eligibility boundaries; not run or source-audited. |
+| S7 | [Subagents tool reference](https://github.com/nicobailon/pi-subagents/blob/95683a4427e1e4af8de03f1a9ca03ec4c2799b73/docs/tool-reference.md) | Same revision; read in full. Selected retained-child/workflow receipt/steering source and test code subsequently inspected in ecosystem findings; not run. |
 | S8 | [pi-intercom README](https://github.com/nicobailon/pi-intercom/blob/ddf288186d4c40b8a54fbe8c0d136cbe4893a032/README.md) | `ddf288186d4c40b8a54fbe8c0d136cbe4893a032`; docs and selected broker/receipt/mailbox source/tests inspected; tests unrun. |
 
 The operator reports follow-up friction after delegated work completes. Current docs describe revival from a persisted session file, distinct from keeping the same live child. Treat the historical experience as evidence of a problem to understand, not proof that latest packages erase all context.
@@ -44,8 +44,8 @@ Two distinct sources, not one interchangeable SDK/demo:
 
 | ID | Source | Snapshot and inspection |
 | --- | --- | --- |
-| S9 | [Official standalone Cloudflare example](https://github.com/earendil-works/pi-durable-cloudflare/blob/dcb56ce2d174babb3f00112ac5b8cd597e58ab45/README.md) | `dcb56ce2d174babb3f00112ac5b8cd597e58ab45`; README read in full. Application/tests not yet reviewed. |
-| S10 | [Agents SDK Pi harness guide](https://github.com/cloudflare/agents/blob/7dd51c518c517b0f9f92ec7e2c3ad1004222955e/docs/agents/harnesses/pi.md) | `7dd51c518c517b0f9f92ec7e2c3ad1004222955e`; read in full; SDK implementation/tests pending. |
+| S9 | [Official standalone Cloudflare example](https://github.com/earendil-works/pi-durable-cloudflare/blob/dcb56ce2d174babb3f00112ac5b8cd597e58ab45/README.md) | `dcb56ce2d174babb3f00112ac5b8cd597e58ab45`; README plus selected session/protocol/application and test source inspected; tests unrun. |
+| S10 | [Agents SDK Pi harness guide](https://github.com/cloudflare/agents/blob/7dd51c518c517b0f9f92ec7e2c3ad1004222955e/docs/agents/harnesses/pi.md) | `7dd51c518c517b0f9f92ec7e2c3ad1004222955e`; guide read in full and cached harness/types implementation inspected; not full SDK/test audit. |
 | S11 | [SDK Pi example README](https://github.com/cloudflare/agents/blob/7dd51c518c517b0f9f92ec7e2c3ad1004222955e/examples/next/harnesses/pi/README.md) | Same revision; read in full. |
 | S12 | [SDK example design notes](https://github.com/cloudflare/agents/blob/7dd51c518c517b0f9f92ec7e2c3ad1004222955e/examples/next/harnesses/pi/NOTES.md) | Same revision; read in full; historical/partly stale claims must be reconciled with current Pi. |
 

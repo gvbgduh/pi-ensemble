@@ -11,7 +11,7 @@ Deliver a functioning runtime; current phase is evidence intake and concrete des
 | Substrate/ecosystem | Bounded official + latest-package/Cloudflare/community source inspection integrated | Select released dependency set and run compatibility/fault gates after review; tests unrun |
 | Host/client design | Concrete design v1 + phased implementation plan written | Astra review of pinned proposal, author dispositions and operator acceptance |
 | Jev and measurement | Direct TypeSafe smoke passed: three synthetic calls, usage/cost estimate recorded | Continue suitable typed use; framing tests and reusable instrumentation remain pending |
-| Independent review | Report intake complete; concrete architecture review ready | Send pinned design/plan to live Astra; separate findings/disposition |
+| Independent review | ASTRA-DESIGN-01 rev1 requested at `ab0d906`; live Astra assigned isolated findings | Await findings, author disposition and operator acceptance; no implementation authorized |
 
 ## Milestone log
 
