@@ -11,7 +11,7 @@ Snapshot: `1402973a9dbe8c627341e04c9744c54953e285ca`.
 | ID | Pinned source | Inspection status |
 | --- | --- | --- |
 | S1 | [Durable README](https://github.com/earendil-works/pi/blob/1402973a9dbe8c627341e04c9744c54953e285ca/packages/durable/README.md) | Read in full; not experimentally verified. |
-| S2 | [Normative spec](https://github.com/earendil-works/pi/blob/1402973a9dbe8c627341e04c9744c54953e285ca/packages/durable/docs/spec.md) | Located; complete review pending. |
+| S2 | [Normative spec](https://github.com/earendil-works/pi/blob/1402973a9dbe8c627341e04c9744c54953e285ca/packages/durable/docs/spec.md) | Luna reports complete normative review and selected source/test inspection; [findings](durable-source-findings.md). Tests not run. |
 | S3 | [Background agents](https://github.com/earendil-works/pi/blob/1402973a9dbe8c627341e04c9744c54953e285ca/packages/durable/test/examples/23-subagent-background.ts) | Source read in full; not run. |
 | S4 | [Foreground child](https://github.com/earendil-works/pi/blob/1402973a9dbe8c627341e04c9744c54953e285ca/packages/durable/test/examples/22-subagent-foreground.ts) | Identified; review pending. |
 | S5 | [Reviewer](https://github.com/earendil-works/pi/blob/1402973a9dbe8c627341e04c9744c54953e285ca/packages/durable/test/examples/28-reviewer.ts) | Identified; review pending. |
@@ -58,7 +58,7 @@ Pick implementations that answer a concrete design question; do not install/reus
 
 ## Empirical workflow input
 
-[Work-setup analysis brief](work-setup-analysis-brief.md) prepared. Operator supplied `project/reports/work-setup-analysis-brief.md`, but intake comparison found it byte-identical to the instructions, not the completed Argon report; corrected findings are pending. No sanitized skill bundle received. Preserve operator-reported evolution from solo work through model/orchestration experiments; only the last few sessions describe the legacy setup. Astra must read the completed report in full. Operator statements are requirements/experience, not corpus-wide measured frequencies.
+[Work-setup report](../reports/work-setup-insights.md) received after the operator corrected an accidentally supplied brief. Orchestrator and Astra read all 716 lines. [Intake assessment](../findings/2026-10-19-work-report-intake.md) records chronology, provenance and quantitative/causal caveats. Report includes sanitized skill behavior summaries, not an executable bundle. Only two final episodes used the four-role roster. Imported reported corpus results are not independently reproduced on this machine.
 
 ## Access and provenance
 

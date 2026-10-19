@@ -7,8 +7,8 @@ Deliver a functioning runtime; current phase is evidence intake and concrete des
 | Stream | State | Next |
 | --- | --- | --- |
 | Product/tracker foundation | Updated with operator review | Keep README, AGENTS, docs and tracker aligned |
-| Work-setup evidence | Supplied reports-path file is byte-identical to analysis instructions, not Argon's findings | Operator to supply completed report; read in full, preserve solo-to-late-multi-agent chronology |
-| Substrate/ecosystem | Luna assigned official Durable source/tests in isolated worktree (UPSTREAM-01 rev1) | Incorporate exact-revision findings; orchestrator completes ecosystem comparison |
+| Work-setup evidence | Correct Argon report received; orchestrator and Astra read all 716 lines | Use chronological findings with intake caveats; no raw-corpus verification |
+| Substrate/ecosystem | Durable source/spec/test inspection integrated; Luna researching ecosystem (ECOSYSTEM-01 rev1) | Integrate latest-package/community comparison, then concrete design/plan |
 | Host/client design | C preferred; D optional; context-rollover proposal added | Concrete ownership, attachment, steering/ambiguity and context-replacement contracts |
 | Jev and measurement | Direct TypeSafe smoke passed: three synthetic calls, usage/cost estimate recorded | Continue suitable typed use; framing tests and reusable instrumentation remain pending |
 | Independent review | Brief expanded; no review yet | Highlight the Astra milestone when concrete design/evidence are ready |
@@ -93,6 +93,12 @@ Deliver a functioning runtime; current phase is evidence intake and concrete des
 - Discovered the operator's simplified live roster through intercom. Assigned Luna UPSTREAM-01 rev1 official Durable source/tests in an isolated worktree; Astra acknowledged standing by for a pinned design. No architecture review performed yet.
 - Operator specifies this bootstrap session ceiling 272K and wind-down at 220–230K. This does not silently set future runtime defaults.
 - Intake check: `project/reports/work-setup-analysis-brief.md` is byte-identical to the research brief, not a completed Argon findings report. Requested corrected file; did not publish duplicate instructions as findings. Operator's chronology warning is retained: corpus evolves from solo through model/orchestration experiments; only late sessions represent the legacy setup. Astra must read the actual report in full when available.
+
+### 2026-10-19 — Correct work report and official substrate evidence
+
+- Operator corrected the report filename to `project/reports/work-setup-insights.md`; imported unchanged and indexed. Orchestrator and Astra independently read all 716 lines. Intake assessment and Astra findings preserve chronology and disclose denominator, approval-status, classifier, causal and requirement-ID caveats; raw corpus was not imported/reverified.
+- Integrated Luna's official normative/source/test findings as `2ebd87b` (UPSTREAM-01 rev1). Latest HEAD differs in selected implementation; no upstream tests or runtime experiments run. Durable supplies persistence/scheduling/projection, not a daemon, authorization, cross-process writer lock, or safe external exactly-once effects.
+- Assigned Luna bounded ECOSYSTEM-01 rev1 follow-up in its isolated worktree for latest-package, Cloudflare and selected community source comparison. Concrete design and plan remain next, not implemented/accepted architecture.
 
 ## Handoff
 
