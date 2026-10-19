@@ -4,7 +4,7 @@
 
 Use **Jev through direct TypeSafe AI access** for suitable typed decisions, including codemode. Adoption is settled; practical task selection, secure provisioning, and instrumentation are implementation work. Laya is a possible alternative, not a local hardware requirement or a blocker.
 
-No Jev calls have been made from this project yet, and no credential has been configured here. This is the current integration contract, not an implementation claim.
+Direct TypeSafe authentication and three synthetic codemode calls succeeded on 2026-10-19; see [smoke-test evidence](../project/findings/2026-10-19-jev-smoke.md). Credentials remain private to Pi, not configured in this repository. Runtime integration and reusable measurement are not implemented.
 
 ## Access and pricing
 

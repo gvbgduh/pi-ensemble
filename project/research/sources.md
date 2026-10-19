@@ -58,8 +58,8 @@ Pick implementations that answer a concrete design question; do not install/reus
 
 ## Empirical workflow input
 
-[Work-setup analysis brief](work-setup-analysis-brief.md) prepared. No corpus report or sanitized skill bundle has been received. Operator statements are requirements/experience, not corpus-wide measured frequencies.
+[Work-setup analysis brief](work-setup-analysis-brief.md) prepared. Operator supplied `project/reports/work-setup-analysis-brief.md`, but intake comparison found it byte-identical to the instructions, not the completed Argon report; corrected findings are pending. No sanitized skill bundle received. Preserve operator-reported evolution from solo work through model/orchestration experiments; only the last few sessions describe the legacy setup. Astra must read the completed report in full. Operator statements are requirements/experience, not corpus-wide measured frequencies.
 
 ## Access and provenance
 
-Authenticated GitHub CLI access works. Web-access is installed but tools are not exposed to this active session; primary GitHub research can proceed without it. Do not send private imports/session text as search queries. Price and service facts supplied by the operator are labeled as such; actual Jev billing is not verified by native zero-cost metadata.
+Authenticated GitHub CLI access works. In the fresh session codemode works and web-access tools were enabled; direct TypeSafe classifier calls succeeded (see smoke findings). Primary GitHub source research can also proceed through Git/GitHub CLI. Do not send private imports/session text as search queries. Price and service facts supplied by the operator are labeled as such; actual Jev billing is not verified by native zero-cost metadata.

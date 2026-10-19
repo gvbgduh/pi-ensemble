@@ -2,15 +2,15 @@
 
 ## Current phase and workstreams
 
-Deliver a functioning runtime; current phase is evidence intake and concrete design. Codemode and tool search have been enabled in local Pi settings; secure TypeSafe login confirmation and a smoke test are pending. No runtime, portable instrumentation, recovery experiments, Jev calls, or Astra review is implemented/performed yet.
+Deliver a functioning runtime; current phase is evidence intake and concrete design. Codemode and tool search are available. Direct TypeSafe Jev authentication and three synthetic calls succeeded; see [smoke evidence](findings/2026-10-19-jev-smoke.md). No runtime, portable instrumentation, recovery experiments, or Astra design review yet.
 
 | Stream | State | Next |
 | --- | --- | --- |
 | Product/tracker foundation | Updated with operator review | Keep README, AGENTS, docs and tracker aligned |
-| Work-setup evidence | Analysis brief prepared; report not received | Operator shares brief with work agent; optional sanitized skills/templates |
-| Substrate/ecosystem | Official Pi and latest legacy/Cloudflare docs partially read | Complete normative/source/tests comparison; inspect community implementations |
+| Work-setup evidence | Supplied reports-path file is byte-identical to analysis instructions, not Argon's findings | Operator to supply completed report; read in full, preserve solo-to-late-multi-agent chronology |
+| Substrate/ecosystem | Luna assigned official Durable source/tests in isolated worktree (UPSTREAM-01 rev1) | Incorporate exact-revision findings; orchestrator completes ecosystem comparison |
 | Host/client design | C preferred; D optional; context-rollover proposal added | Concrete ownership, attachment, steering/ambiguity and context-replacement contracts |
-| Jev and measurement | Direct TypeSafe selected; codemode/tool search enabled; login/test pending | User `/login typesafe`, then reload/fresh Pi; neutral smoke test and usage/cost recording |
+| Jev and measurement | Direct TypeSafe smoke passed: three synthetic calls, usage/cost estimate recorded | Continue suitable typed use; framing tests and reusable instrumentation remain pending |
 | Independent review | Brief expanded; no review yet | Highlight the Astra milestone when concrete design/evidence are ready |
 
 ## Milestone log
@@ -85,6 +85,14 @@ Deliver a functioning runtime; current phase is evidence intake and concrete des
 - Clarified that tracker files are optional, especially issue/ticket maps. Existing placeholder can remain; no need to create GitHub issues merely for scaffolding. Treat metaphors as intent rather than literal architecture requirements.
 - Enabled standalone `tool_search` alongside codemode at the user's request. Codemode's internal `searchTools()` is separate; the standalone tool helps discover/activate deferred tools. Fresh process/reload and actual availability remain to verify.
 - User requested winding down this growing conversation and starting a fresh Pi session from the repository directory. Rewrote the compact continuation with setup status, scoped author/reviewer focus, next actions, and honest pending checks. Do not import the full prior transcript into the successor.
+
+### 2026-10-19 — Authenticated Jev smoke and live roster
+
+- Verified codemode execution and standalone tool-search invocation. Native classifier discovery listed direct `typesafe/jev-latest`; three synthetic calls succeeded with complete/failing/unknown acceptance evidence, without reading credentials.
+- Recorded requests, separate caller baselines, probabilities, usage, duration and limitations in [smoke findings](findings/2026-10-19-jev-smoke.md). Total 1,276 input / 144 output tokens; operator-rate estimate $0.000053592, not an invoice. No reusable instrumentation or framing-sensitivity validation claimed.
+- Discovered the operator's simplified live roster through intercom. Assigned Luna UPSTREAM-01 rev1 official Durable source/tests in an isolated worktree; Astra acknowledged standing by for a pinned design. No architecture review performed yet.
+- Operator specifies this bootstrap session ceiling 272K and wind-down at 220–230K. This does not silently set future runtime defaults.
+- Intake check: `project/reports/work-setup-analysis-brief.md` is byte-identical to the research brief, not a completed Argon findings report. Requested corrected file; did not publish duplicate instructions as findings. Operator's chronology warning is retained: corpus evolves from solo through model/orchestration experiments; only late sessions represent the legacy setup. Astra must read the actual report in full when available.
 
 ## Handoff
 

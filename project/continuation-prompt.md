@@ -4,7 +4,7 @@
 
 **Goal:** deliver a functioning local-first Pi Durable multi-agent runtime, not a research project. Repository: `~/Projects/pi-ensemble`; public remote: https://github.com/gvbgduh/pi-ensemble. This handoff replaces the need to load the previous long conversation.
 
-**State:** early evidence/design only. No runtime, custom metrics package, Jev calls, recovery experiments, or Astra review yet. Previous documentation milestones were pushed to `main`; verify clean Git/remote state before starting.
+**State:** early evidence/design only. No runtime, custom metrics package, recovery experiments, or Astra review yet. Three direct TypeSafe Jev synthetic smoke calls succeeded; native codemode and tool search are available. Previous documentation milestones were pushed to `main`; verify clean Git/remote state before starting.
 
 **Read selectively:** `AGENTS.md`, this handoff, the current table in `project/progress.md`, then relevant docs/variables. `docs/` owns current best product knowledge; `project/` owns dynamic work/evidence/history. Tracker files are optional tools, not a requirement to fill empty templates or use GitHub issues. Commit/push checked milestones frequently and keep README/AGENTS/current docs aligned. Interpret metaphors as intent, not extra literal requirements.
 
@@ -21,21 +21,21 @@
 
 The prior session read Pi 1.3.0 provider/settings/configuration/security docs and enabled `"defaultTools": ["+codemode", "+tool_search"]` in `~/.pi/agent/settings.json`, preserving other settings. A private backup exists outside tracked files. A fresh Pi process should load it; `/reload` enables it in an existing session. Web-access is installed too, but the new tools were not exposed to the old agent turn. Codemode's `searchTools()` helper is distinct from the standalone `tool_search` tool; the latter discovers/activates deferred tools.
 
-**User action:** `/login typesafe`, enter the key only in Pi's private credential UI, then reload or start fresh. Do not request a key in chat, print auth files, or put secrets in commands/Git. `auth.json` permission was 0600. Only environment-variable presence was checked (`TYPESAFE_API_KEY` absent); stored auth was not examined, and authentication is untested.
+**Current verification:** operator already logged in; `jev-latest` was available and three synthetic `models.classify` calls succeeded. No further login requested. See `project/findings/2026-10-19-jev-smoke.md` and JSON record. Do not request a key in chat, print auth files, or put secrets in commands/Git. Stored auth contents were not examined.
 
-After login/tools are available: discover the direct TypeSafe classifier, run a few small public/synthetic neutral cases, record outcomes/usage and explicit rate-based cost estimate. Native zero-cost metadata is not billing proof. Do not claim setup complete before a successful call. See `docs/decision-models.md` and `docs/observability.md`.
+Smoke completed: 1,276 input / 144 output tokens, $0.000053592 rate-based estimate, three expected labels. Framing tests, Durable adapter, and portable instrumentation remain untested. Native zero-cost metadata is not billing proof. Do not claim setup complete before a successful call. See `docs/decision-models.md` and `docs/observability.md`.
 
 ## Agent focus: design/implementation author
 
-1. Finish Jev smoke test when the user has logged in; otherwise proceed with source research without secrets.
-2. Give the work agent `project/research/work-setup-analysis-brief.md`. Await a public-safe report from roughly 70–80 sessions and optional sanitized project/status/spin-up skills/templates; raw workplace sessions stay at work. No report/bundle received yet.
-3. Continue upstream/implementation comparison in parallel. `project/research/sources.md` records exact Pi/Cloudflare/latest legacy-package snapshots and what was actually read. Full normative/source/test review and community inspection remain incomplete. Cloudflare has SDK integration as well as a standalone example; notes may be stale. Latest subagents documents retained resume, so do not assume all completed context is irretrievable.
+1. Jev smoke is complete; use suitable typed calls with neutral rubrics and explicit provenance. Current bootstrap roster: `pi-ensemble-001-orchestrator`, Luna `pi-ensemble-001-worker`, Astra `pi-ensemble-001-adviser`, reachable through intercom. Session ceiling 272K, wind down 220–230K.
+2. Obtain the actual public-safe Argon report and optional sanitized project/status/spin-up skills/templates; raw workplace sessions stay at work. The analysis instructions remain in `project/research/work-setup-analysis-brief.md`. The supplied `project/reports/work-setup-analysis-brief.md` is byte-identical to instructions, not the completed report; user asked to correct. Actual report must be read in full by Astra and treated as evolution from solo/model/orchestration experiments, not a single stable legacy topology.
+3. Luna owns UPSTREAM-01 rev1 official Durable source/test research in isolated worktree/branch; report to `project/research/durable-source-findings.md`. Orchestrator owns remaining ecosystem comparison and tracker/design edits. Continue upstream/implementation comparison in parallel. `project/research/sources.md` records exact Pi/Cloudflare/latest legacy-package snapshots and what was actually read. Full normative/source/test review and community inspection remain incomplete. Cloudflare has SDK integration as well as a standalone example; notes may be stale. Latest subagents documents retained resume, so do not assume all completed context is irretrievable.
 4. Incorporate evidence into a concrete design (`docs/design.md`, to create) and high-level implementation plan (`project/implementation-plan.md`, to create): boundaries, reused components, message/ownership contracts, context/continuation routing, failure cases, metrics/security, acceptance tests, phased first vertical slice and rollback. Prioritize risk-changing spikes rather than demanding a complete runtime before review.
 5. Explicitly flag the Astra review milestone once that proposal is coherent. Obtain independent findings and operator acceptance before consequential architecture implementation.
 
-## Agent focus: Astra reviewer — planned, not running
+## Agent focus: Astra reviewer — live, standing by for proposal
 
-Use `project/reviews/astra-brief.md` against a specified proposal revision, not this entire historical chat. Challenge rollover/handoff fidelity, routing/assignment races and ownership, per-agent scoped continuation and automatic lifecycle, autonomous decision escalation, and Jev question bias/portable metrics. Write separate findings and dispositions. A focused high-thinking pass is proposed if supported, not a proven optimum.
+Astra acknowledged the bounded review brief through intercom; no design review started. Use `project/reviews/astra-brief.md` against a specified proposal revision, not this entire historical chat. Read the completed Argon report in full when supplied. Challenge rollover/handoff fidelity, routing/assignment races and ownership, per-agent scoped continuation and automatic lifecycle, autonomous decision escalation, and Jev question bias/portable metrics. Write separate findings and dispositions. A focused high-thinking pass is proposed if supported, not a proven optimum.
 
 ## Useful inputs, not blockers for all work
 
