@@ -47,6 +47,44 @@ If more work is needed, record an explicit **continuation work item** linked to 
 
 A successor/another worker can execute that continuation. The same logical worker may take it if its context and ownership remain suitable; continuity is not a requirement to keep stuffing one conversation forever. Do not recursively concatenate every prior continuation summary: summarize current remaining state, link immutable predecessors for selective lookup, and retain verified outcomes in the project substrate.
 
+## Shared continuation map with scoped agent views
+
+A useful initial representation is a `continuation-prompt.md` with a **small common core and sections keyed by logical agent**, each describing that agent's continuation focus. If it grows, the root becomes a short index linking per-agent files; do not keep divergent copies of the same continuation.
+
+Suggested shape:
+
+```text
+Common: project goal, current authority/decision revisions, shared constraints
+Agent focus: logical address + assignment revision
+  current objective / verified state
+  next bounded task and acceptance
+  unresolved decisions / dependencies / effect hazards
+  relevant artifact references and revisions
+  driver/result destination / handoff or replacement request
+```
+
+**Recommended default: scoped delivery, not everyone reads everything.** A worker receives the common core, its own focus/task, and just-needed pointers. The driver reads the compact cross-agent map and can inspect other sections when needed. An independent reviewer can fetch relevant original evidence without inheriting all conversations.
+
+The driver chooses/maintains the allocation, but need not copy and rewrite a briefing through an LLM for every hop. A host can select a section deterministically using logical agent/work-item IDs and revision checks; the task envelope can reference that section/revision. Do not assume scoped Markdown delivery is already built in.
+
+One maintainer/host projection owns aggregate edits; agents report their changes through correlated updates rather than concurrently overwriting one shared file. Human-edited goals/decisions remain intentional project inputs; runtime assignment/admission/receipt records carry operational authority. Define projection/reconciliation and freshness explicitly—Markdown and the task store do not form one magical transaction.
+
+## Automatic continuation without manual session numbering
+
+At a safe boundary, distinguish these signals:
+
+- **Task result:** verified delivered state and evidence, or a failed/blocked outcome.
+- **Continuation ready:** next bounded work item plus its focus/reference, unresolved state, and predecessor lineage.
+- **Replacement requested:** context/capacity or another reason this incarnation should not take the next slice.
+
+They may be reported together, but "I'm done" is not enough to decide whether the project is done, work remains, or a new writer can safely start.
+
+The responsible driver is notified durably. It can assign the next item to the current worker, request a new incarnation behind the logical address, or assign a distinct worker. The host checks authority, readiness, old ownership, dependencies, and capacity, then provisions/reroutes within the operator's configured policy. A worker request is not unilateral permission to spawn unlimited agents.
+
+Routine spin-up, briefing, and reattachment can therefore be automatic. The operator should not need incremental session counters or manually renamed suffixes to continue a project. **Internal conversation/incarnation IDs, epochs, receipts, and lineage still exist**; hiding lifecycle bookkeeping from the UI is not removing its safety function. There may still be a new underlying model conversation even when the human sees the same logical agent.
+
+Idle/completed agents do not need continuous model turns. Stop when no authorized ready work remains; ambiguity/human gates still surface. Automatic continuation is not a self-triggering loop of ever-expanding instructions.
+
 ## Context-aware allocation
 
 ```mermaid
@@ -98,5 +136,7 @@ Reassignment does not grant new authority, refresh an expired approval, or erase
 - Can messages/steering/results race reassignment without duplicate effects, lost decisions, or two mutation owners?
 - Does parallelism respect worktree/dependency/budget limits and yield verified results that the driver can aggregate with small context?
 - Are stale/missing project docs detected, and can ambiguous work wait without blocking unrelated tasks?
+- Can the host deliver common-plus-assigned-focus sections without an LLM copying the whole continuation map? Are aggregate writes, human edits, and operational records reconciled by revision?
+- Does a completion/continuation/replacement report notify the right driver and safely provision the next context without manual session suffixes, while preserving internal IDs/epochs and preventing runaway spawn or a second writer?
 
 These questions belong in [Astra review](../project/reviews/astra-brief.md) and fault tests, not just role prompts.

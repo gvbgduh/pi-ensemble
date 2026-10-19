@@ -68,7 +68,7 @@ Use predictable sections, not a growing stream of unrelated notes. A document ha
 | Decisions | ID/name/status index → accepted entries with context/evidence/trade-off → explicit supersession links; substantial ADRs can be linked separately |
 | Variables | Stable ID → question/options/impact → owner or next evidence → current state; resolved items link a decision rather than disappear unexplained |
 | Tickets / PRs | External ID/link → owner/scope → current verified state → dependencies/reviewed revision → last known evidence; explicitly say none if empty |
-| Continuation | Goal/current state → just-needed decisions/constraints → blockers and next actions → relevant artifact pointers; refresh, do not append indefinitely |
+| Continuation | Small common goal/current authority core → per-logical-agent focus with current state/next bounded task/acceptance → blockers/decisions/effect hazards → driver/result route and revisioned pointers. Refresh rather than append indefinitely; split into linked per-agent files if large. |
 | Findings / reports | Date/revision and question → method/coverage → observations/evidence → interpretation/confidence/counterexamples → implications/next test |
 | Review | Proposal revision/scope/questions → independent prioritized findings → evidence/failure scenario → author dispositions in a separate artifact → acceptance/residual risk |
 
@@ -91,7 +91,7 @@ Do not read all chronology before every task. Verify live state before acting on
 
 Budget context per role/incarnation and use bounded retrieval. Keep common project context compact; allow necessary independent evidence checking without duplicating entire histories. Before a conversation becomes too large, prepare a compact handoff and safely replace the incarnation behind its logical address. See [context lifecycle](context-lifecycle.md); this must preserve live ownership and routing, not only prose.
 
-Project Markdown is a reusable knowledge substrate for bounded worker tasks, not material to paste into every worker. A continuation is a new scoped work item with verified progress/remaining acceptance and revisioned pointers, not the cumulative transcript. See [task contract](task-contract.md).
+Project Markdown is a reusable knowledge substrate for bounded worker tasks, not material to paste into every worker. A continuation is a new scoped work item with verified progress/remaining acceptance and revisioned pointers, not the cumulative transcript. See [task contract](task-contract.md). Its scoped continuation view lets workers load the common core and assigned focus rather than every agent's section. The driver maintains the compact map; the host can select relevant sections deterministically. Keep one aggregate maintainer/projection rather than competing same-file edits.
 
 ## Update and promotion rules
 

@@ -70,6 +70,13 @@ Deliver a functioning runtime; current phase is evidence intake and concrete des
 - Added neutral versioned rubrics, observation/interpretation separation, expected-answer leakage prevention, counterevidence/unknown handling, controlled framing tests, and independently labeled outcomes to integration/metrics/requirements and Astra review.
 - Added an explicit experiment and work-session analysis question. No claim of validated neutrality or performed classifier testing.
 
+### 2026-10-19 — Scoped continuation map and automatic lifecycle
+
+- Operator proposed per-agent continuation focus and automatic driver-notified replacement instead of manual incremental sessions/suffixes.
+- Added the proposed small common core plus per-logical-agent sections/linked files, scoped deterministic host delivery, aggregate-update authority, task-result/continuation/replacement signals, and bounded automatic provisioning/rerouting.
+- Preserved internal incarnation IDs/epochs, ownership and provenance; no claim that underlying conversations or failure bookkeeping disappear. Added Astra questions, requirements, and a fault experiment.
+- Committed/pushed context/task lifecycle and Jev question-integrity refinements as `f462d22`; source docs/tracker split was pushed as `ee44b33`.
+
 ## Handoff
 
 Use [continuation-prompt.md](continuation-prompt.md) for next actions and [variables.md](variables.md) for unresolved details. Preserve dated observations; promote current conclusions to product docs.

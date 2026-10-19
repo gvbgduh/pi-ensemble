@@ -30,6 +30,18 @@ Start with `AGENTS.md`, `docs/project-structure.md`, the current table in `proje
 4. Provision Jev through supported private credential storage and exercise it; implement portable decision/outcome metrics, not just token counters. Review Pi setup/security docs before changing global configuration.
 5. Highlight the Astra review handoff when the design is ready; independent review and operator acceptance precede committing to consequential runtime architecture.
 
+## Agent-specific continuation focus
+
+These are focus assignments for future work, not a claim that multiple agents are currently running. The document is still small enough for bootstrap reading; a runtime worker should receive the shared core plus its own focus, not all roles' detail by default.
+
+### Design/implementation author — current working role
+
+Incorporate safe work-setup evidence; finish capability/source comparison; write the concrete host/client and task/context design. Define scoped continuation selection, completion/replacement signals, automatic provisioning, revisioned routing, and question-integrity measurement. Keep the current docs and tracker aligned; commit/push checked milestones often.
+
+### Astra reviewer — planned, not running
+
+Wait for a concrete proposal revision and high-risk evidence. Use `project/reviews/astra-brief.md`; independently challenge context rollover, horizontal task routing, per-agent continuation views, automatic lifecycle/ownership, and Jev framing bias. Write separate findings, not edits that erase the author's proposal.
+
 ## Inputs still useful
 
 Creator-posted Slack example links or sanitized excerpts; exact Astra model ID if needed for launch; broader provider requirements. Do not block source research waiting for these.

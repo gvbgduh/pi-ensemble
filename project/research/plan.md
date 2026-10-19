@@ -58,6 +58,7 @@ Proposed; **none have run yet**. Start with a fake provider, isolated temporary 
 | E18 | Bounded tasks and continuations distributed across independent workers | Project-MD pointers suffice without parent transcript inheritance; continuation size stays bounded over many passes; driver context stays small. |
 | E19 | Split/reassign work while steering/results are in flight | Assignment-aware routes preserve acceptance lineage, aggregation, authority, and one mutation owner; no ambiguous worker broadcast or repeated effects. |
 | E20 | Leading and neutral Jev questions, controlled paraphrase/polarity/label variants, labeled counterexamples | Caller expectation is not evidence; framing sensitivity and unknowns are visible; no favorable-result selection or spurious independent-validation claims. |
+| E21 | Scoped continuation selection and completion-driven replacement under concurrent updates | Worker receives common-plus-assigned focus at a valid revision; driver notified; automatic spin-up has one owner/valid authority, no full-map duplication or manual suffixes, and no runaway continuation loop. |
 
 Prioritize experiments that could change the architecture; defer others explicitly rather than requiring a full product before its design review.
 

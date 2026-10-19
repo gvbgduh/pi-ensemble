@@ -74,6 +74,13 @@ Status: current target, updated with operator clarifications on 2026-10-19. Thes
 | R35 | Task briefs are sufficiently self-contained through concise intent/scope/acceptance, explicit authority/ownership, and revisioned project-MD/artifact pointers. Unfinished work is an explicit bounded continuation work item with verified progress, remaining criteria, pending effects/decisions, and predecessor lineage—not accumulated instructions or recursively concatenated summaries. |
 | R36 | Horizontal splits/reassignment and incarnation rollover have distinct routing transitions. Track work-item/assignment revision, current logical assignee, driver/result destination, child aggregation, and late-result provenance. Reassignment must not duplicate effects, create multiple writers, erase authority limits, or lose steering/acceptance lineage. See [task contract](task-contract.md). |
 
+## Scoped continuation and automatic lifecycle
+
+| ID | Requirement |
+| --- | --- |
+| R38 | Support a continuation map with a small common core and per-logical-agent focus/next-task sections, or linked per-agent files when needed. Default worker briefing is scoped to common-plus-assigned focus and revisioned artifact pointers. The driver maintains allocation; the host can select a view without an LLM relay. Define freshness and aggregate-update authority rather than allow concurrent divergent edits. |
+| R39 | Distinguish task result, continuation-ready, and replacement-requested signals. Notify the responsible driver, then allow host-controlled provisioning/briefing/rerouting within configured policy without routine manual spin-up or user-managed incremental session suffixes. Preserve internal IDs/epochs, authority, ownership, receipts, and lineage; do not turn completion into unlimited automatic spawning. |
+
 ## Not assumed
 
 - Particular models are permanently best at a role.

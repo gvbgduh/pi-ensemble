@@ -63,6 +63,9 @@ Treat [context lifecycle](../../docs/context-lifecycle.md) as a proposal to chal
 - Do stale docs, concurrent steering, late replies, failed handoffs, and writer leases prevent unsafe dual ownership or duplicate effects across horizontal workers?
 - Is more parallelism justified by task independence, context distribution, and verification capacity, rather than agent count alone? What measured overhead or lost context would falsify the approach?
 
+- Can a shared continuation map offer a small common core plus per-agent focus, with deterministic scoped delivery instead of all agents reading everything or an LLM copying summaries? Who owns aggregate updates, and how do human edits/revision drift reconcile with operational task state?
+- Can task-result/continuation-ready/replacement-requested events trigger safe driver-notified provisioning and rerouting without manual spin-up or visible session counters? Are internal identity/epochs, authority limits, and anti-loop controls preserved?
+
 Review [task contract](../../docs/task-contract.md) together with rollover, not as an unrelated future feature.
 
 ### Direct steering without drift
