@@ -1,50 +1,38 @@
 # Pi Ensemble
 
-Researching a durable, human-steered multi-agent workspace built around Pi.
+A durable, human-steered multi-agent runtime built around Pi.
 
-**Status: research and design scaffold. No runtime implementation yet.**
-This is an independent project, not an official Pi component.
+**Status: early design and research; no functioning runtime yet.** Research is a means to delivering the runtime, not the end product. This is an independent project, not an official Pi component.
 
-## Why
+## What we are building
 
-The starting workflow uses long-lived worker, orchestrator, manager, and adviser sessions, peer messaging, bounded subagents, and shared Markdown project trackers. The question is whether `@earendil-works/pi-durable` can replace the coordination infrastructure without losing role separation, direct human steering, or inspectable project state.
+An ensemble of persistent agents with separate contexts, complementary roles, direct peer communication, and shared project knowledge. Agents work autonomously within agreed boundaries; the human can attach to any agent, inspect its activity and summary, ask why it made a decision, or request an adjustment without routing through a coordinator.
 
-Replacing packages is not the objective by itself. Preserving useful behavior while improving recovery, control, and observability is.
+Think **tmux for agent work**, not just a command that spawns disposable children: detaching the UI or finishing a task must not discard an agent's identity and useful context. Direct human steering must also update the driving agent so the rest of the ensemble stays aligned.
 
-The initial target is a local setup, portable to another laptop, with a host/client boundary that can accommodate remote access later. Agents must remain directly addressable with their context after completing work. The UI is interchangeable; activity, logs, summaries, and direct conversation are essential. Role layouts are operator-selected per project rather than hard-coded to four agents.
+Layouts are operator-selected per project, with no fixed number of agents or mandatory role topology. The initial target is a local runtime portable between laptops. The design should accommodate future remote clients without requiring remote deployment in the first version.
+
+When an ambiguity or consequential decision cannot be resolved from evidence and existing authority, the runtime should surface it rather than confidently build on an unsupported assumption. Preserving sound progress matters more than keeping an agent busy or a prompt cache warm.
 
 ## Start here
 
+- [Pi Durable explained](docs/pi-durable.md) — concepts, diagrams, and the attachable-runtime analogy
+- [Requirements](docs/requirements.md) — the current behavioral target
+- [Architecture direction and alternatives](docs/architecture-options.md)
+- [Project structure and reading protocol](docs/project-structure.md)
+- [Legacy workflow](docs/reference/pi-setup-legacy.md) — reformatted, sanitized reference
+- [Decision models](docs/decision-models.md) — Jev integration and secure access
+- [Observability](docs/observability.md) — portable measurement, beyond native token totals
 - [Documentation index](docs/index.md)
-- [Legacy workflow reference](docs/reference/pi-setup-legacy.txt) — sanitized source export
-- [Requirements](docs/requirements.md) — behavior to preserve and improve
-- [Research plan](docs/research/plan.md) — questions, evidence, and experiments
-- [Initial findings](docs/research/initial-findings.md) — preliminary, source-linked observations
-- [Sources](docs/research/sources.md) — pinned upstream references and evidence status
-- [Jev research track](docs/research/jev.md) — active, measurable decision-model experiments
-- [Architecture options](docs/architecture-options.md) — alternatives, not a commitment
-- [Decisions](docs/decisions/README.md)
-- [Astra review brief](docs/reviews/astra-brief.md)
-- [Progress and next session](docs/progress.md)
 
-## Is this a Pi extension?
+## Current work
 
-Undecided. Pi CLI extensions, Pi packages, the coding-agent SDK, and Pi Durable are different integration surfaces. A durable host with an optional Pi CLI adapter is one hypothesis; extending the existing multi-session workflow is another. We will choose after source research, failure-injection experiments, and independent design review.
+[Project tracker](project/README.md) · [Progress](project/progress.md) · [Open questions](project/variables.md) · [Next-session handoff](project/continuation-prompt.md)
 
-## Research sequence
+The preferred direction is a **Pi Durable host with attachable clients**. A thin Pi CLI extension could be an additional client later, not the owner of agent lifetime. We are studying official and community implementations and the existing workflow before finalizing the host design.
 
-1. Extract requirements from the existing workflow.
-2. Inspect pinned upstream documentation, implementation, and examples.
-3. Compare replacement, coexistence, and incremental migration options.
-4. Write a concrete design and review it with Astra and the human operator.
-5. Build the smallest recovery-tested vertical slice, then expand.
+Next: collect evidence from the work setup, map upstream capabilities, prepare a concrete design, and conduct an independent Astra review. Start with a recovery-tested vertical slice and grow it into a functioning runtime. Manual review coordination is a bootstrap mechanism; the runtime should eventually support the same review exchange itself.
 
-No package manifest or extension entry point is included yet: doing so would prematurely choose an integration surface.
+## License
 
-## Public repository boundary
-
-Only generic workflow design and public upstream research belong here. The original legacy export is kept locally at `.local/imports/pi-setup-legacy.txt`, excluded from Git because it includes third-party comments and workplace details. The tracked reference removes that material and export boilerplate; it is not an endorsement of historical model-performance claims.
-
-Credentials, transcripts, databases, real work trackers, and machine-local configuration must remain outside tracked files. Global agent memory is not stored in this repository.
-
-A redistribution license has not been selected yet.
+[MIT](LICENSE).

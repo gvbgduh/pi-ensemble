@@ -55,4 +55,8 @@ A durable host with attachable clients is a reasonable **hypothesis**, not an ac
 
 ## Still unknown
 
-Normative-spec details, installed legacy package versions and behavior, provider/subscription compatibility, concrete client UX, released package compatibility, migration and state export, performance with a multi-day ensemble, and actual recovery behavior. See [the research plan](plan.md).
+Normative-spec details, latest legacy-package behavior beyond documented features, provider/subscription compatibility, concrete client UX, released package compatibility, migration and state export, performance with a multi-day ensemble, and actual recovery behavior. See [the research plan](plan.md).
+
+## Follow-up observations — 2026-10-19
+
+C is now the operator-supported preferred direction; D remains an optional client. Cloudflare's SDK Pi harness and official example document host-owned lifetime with transport/UI outside the execution substrate. Latest `pi-subagents` documents retained-child resume from persisted session files, so the historical pain point must not be generalized into a claim that current children can never be followed up. Source/document reading is not a successful integration test; see the updated [source register](sources.md).

@@ -1,15 +1,15 @@
-# Initial requirements
+# Requirements
 
-Status: initial baseline, updated with operator clarifications on 2026-10-19. These describe desired behavior, not existing implementation guarantees.
+Status: current target, updated with operator clarifications on 2026-10-19. These describe the functioning runtime to deliver, not existing implementation guarantees. Work-session evidence will refine them.
 
 ## Role and interaction model
 
 | ID | Requirement |
 | --- | --- |
 | R1 | Long-lived, project-specific ensembles. Worker, orchestrator, manager, and adviser are a starting layout, not mandatory roles. The operator chooses role types, counts, and responsibilities for the problem; each agent has an independent conversation and configurable model/provider. |
-| R2 | Orchestrator owns coordination and project-scale state; workers own implementation; manager provides independent coherence/prose review; adviser provides evidence-based adversarial investigation. |
+| R2 | Role responsibilities and authority are explicit and configurable. In the starting workflow, a driving agent owns coordination/project-scale state, workers implementation, a manager independent coherence/prose review, and an adviser evidence-based investigation. No particular role is mandatory. |
 | R3 | Any authorized role can address another directly and return a result without the orchestrator relaying every message. |
-| R4 | Human can inspect activity/logs and summaries, ask questions, give feedback, steer, pause, or stop any agent directly, including during active work. No mandatory orchestrator hop. The ordinary Pi TUI is not required. |
+| R4 | Human can attach/detach, inspect activity/logs and summaries, ask questions, give feedback, steer, pause, or stop any agent directly, including during active work. No mandatory orchestrator hop. The ordinary Pi TUI is not required; the host, not the client connection, owns agent lifetime. |
 | R5 | Completing a work item must not destroy a persistent agent's identity/context: it remains addressable for explanation and adjustments. Bounded disposable child agents may also exist, but are distinct; lifetime, retention, completion, and cancellation semantics must be explicit. |
 | R6 | Delegate using artifact pointers and compact outcomes; do not replicate every transcript into every context. |
 
@@ -39,7 +39,7 @@ Status: initial baseline, updated with operator clarifications on 2026-10-19. Th
 
 | ID | Requirement |
 | --- | --- |
-| R19 | Attribute usage, elapsed time, failures, review outcomes, and human interventions to roles and work items, with project-level aggregation. |
+| R19 | Attribute usage, elapsed time, failures, review outcomes, and human interventions to roles/work items. Correlate decisions, predictions, actions, steering, verification, and eventual outcomes using a portable event contract usable from Pi, codemode, and the Durable host. Native totals alone are insufficient; preserve unknowns and cost provenance. |
 | R20 | Compare a single-agent baseline, the current multi-session workflow, and the proposed system on the same bounded tasks; more agents is not inherently better. |
 | R21 | Evaluate adviser quality using independently checkable evidence and seeded flaws, not agreement among agents or a classifier alone. |
 
@@ -48,8 +48,17 @@ Status: initial baseline, updated with operator clarifications on 2026-10-19. Th
 | ID | Requirement |
 | --- | --- |
 | R22 | First release targets one local setup, portable between personal and work laptops. Keep a host/client separation and stable identities suitable for future remote/multi-device clients, but defer remote deployment, networking, and sync implementation. |
-| R23 | Actively explore Jev on real bounded typed-decision tasks, including codemode access. Measure usefulness, disagreement, latency, and cost against deterministic rules and agent judgments. Do not treat its predictions as authorization. |
-| R24 | Keep decision-model integration optional and configurable. Investigate Laya as an alternative, but do not require local inference hardware, assume API compatibility, or silently fall back to a paid service. Unavailable or uncertain predictions must be surfaced. |
+| R23 | Integrate and actively use Jev via direct TypeSafe AI access for appropriate typed decisions, including codemode. Adoption is selected. Measure incremental usefulness, disagreement, latency, usage, cost, and downstream outcomes. Predictions are not authorization. |
+| R24 | Keep decision-model use configurable and failure-visible; do not make every action depend on it. Laya may be an alternative, not a required local deployment. Do not assume protocol compatibility or silently switch paid providers. Credentials remain host-owned and out of client messages, prompts, tool environments, and telemetry. |
+
+## Alignment and autonomous decisions
+
+| ID | Requirement |
+| --- | --- |
+| R25 | Direct human steering creates a durable correlated update to the responsible driving agent: changed intent/scope, current state, affected work, and any decision needed. Reconcile dependent plans/trackers and stale work. Receipt/acknowledgment and failures must be visible; notification is not an orchestrator approval hop. Support different driving agents per workstream and avoid echo loops. |
+| R26 | Work autonomously within evidence and granted authority. When consequential ambiguity, conflicting instructions, missing requirements, or a decision outside authority remains unresolved, persist and surface a decision request to the right owner rather than assume. Pause affected work, allow independent work to continue, and record resolution/revision. |
+| R27 | Surface the question, evidence, options, impact, and blocked scope with the decision request. Timeouts must not manufacture consent. Favor preventing throwaway work over uninterrupted execution or cache retention; measure late clarification, drift, and avoidable rework. |
+| R28 | Development and runtime-supported project workflows distinguish current product/project knowledge from dynamic tracking/history. Keep milestone state and handoff current, preserve evidence/decision history, and let agents load only relevant slices. The repository convention is a template, not a mandatory layout for all user projects. |
 
 ## Not assumed
 
@@ -61,18 +70,14 @@ Status: initial baseline, updated with operator clarifications on 2026-10-19. Th
 
 ## Confirmed operator constraints
 
-- Current packages are `nicobailon/pi-subagents` and `nicobailon/pi-intercom`; installed versions still need to be captured.
+- Use latest `nicobailon/pi-subagents` and `nicobailon/pi-intercom` as the comparison baseline; record exact inspected revisions for reproducibility. Historical session versions are context, not a prerequisite.
 - UI choice is flexible. Direct access to a persistent agent's context, activity, summary, and conversation is the requirement, not a particular terminal implementation.
 - Start local and portable; account for future remote clients in the design.
 - Layouts must vary with project scope/complexity and are selected by the operator.
-- Astra review will initially use another Pi session and versioned Markdown artifacts. Frugal, focused reviews matter; no review has happened yet.
-- The operator has Jev access and wants to build intuition through active use, including codemode. Work availability is anticipated; local Laya hardware suitability here is unknown.
+- Astra is used via an OpenAI subscription inside Pi. Review initially uses another session and versioned Markdown; later use the runtime when it can safely support the exchange. Frugal, focused review matters; none has happened yet.
+- Jev access is direct TypeSafe API key access, with operator-reported pricing $0.042/M input tokens and zero output price. Use it and measure it; secure provisioning remains necessary. Local Laya deployment is not required.
+- MIT license accepted. Commit and push coherent checked milestones frequently; keep README, AGENTS, current docs, and tracking aligned.
 
-## Remaining operator questions
+## Evidence and open design work
 
-1. Which subscription-backed/custom providers must work? Credential compatibility needs verification.
-2. Which exact Jev service/API/model is available, what access method does it support, and what spend cap should research use? Do not put credentials in public Git or chat.
-3. What is the exact Astra model/provider identifier and available thinking levels?
-4. What is the initial budget/concurrency envelope, and which publication/remote mutations require a gate here?
-5. Which versions of the two legacy packages are installed at work?
-6. Which public redistribution license should this project use?
+See [open variables](../project/variables.md), [work-setup evidence brief](../project/research/work-setup-analysis-brief.md), and [progress](../project/progress.md). Provider reuse, exact launch IDs, runtime limits, message/revision semantics, and instrumentation packaging remain design/implementation work; name, license, UI flexibility, and Jev adoption are settled.

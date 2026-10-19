@@ -1,6 +1,6 @@
 # Architecture options
 
-Status: hypotheses only. No product architecture has been selected.
+Status: C is the preferred direction, supported by the operator; D is a useful optional client on top. The detailed architecture has not been reviewed or implemented. A/B remain comparison and migration baselines, not equal-priority product destinations.
 
 ## A. Keep Pi CLI peers; improve the current packages
 
@@ -37,22 +37,23 @@ Option C owns durable execution and coordination. A coding-agent CLI extension p
 - Needs a clear protocol and failure semantics for reconnect, authentication, duplicate commands, and cancellation.
 - Must avoid running two independent agent loops for one role or making a UI adapter another source of truth.
 
-## Working hypothesis
+## Preferred direction
 
-Investigate C first because the background-agent example directly addresses persistent conversation and callback mechanics, and the operator does not require native Pi CLI UI. D is an optional later adapter if it earns its maintenance cost. Keep A as a serious baseline; package replacement is not a success metric.
+Develop C toward a functioning attachable runtime: the host owns persistent agents, clients inspect and interact with them. Think tmux-style attachment, not disposable per-task agent sessions. D can expose the same host through Pi later. Use A as a serious behavior/migration baseline; package replacement alone is not a success metric.
 
 The local MVP should distinguish the agent host from its attachable clients, without building remote deployment or synchronization yet. Persistent agent identity/conversation must outlive an individual work item; logical completion must not terminate the agent's usefulness for feedback and adjustments.
 
-## Questions that select among them
+## Evidence and design questions
 
 - UI flexibility is confirmed: compare the least expensive client options that expose activity, summaries, and direct conversation.
 - Which existing extensions, skills, provider logins, and tools must be reused unchanged?
 - One local host is the first target. What protocol/ownership decisions must remain compatible with future authenticated remote clients?
-- Which missing guarantees actually cause pain in the existing workflow?
-- How much custom UI/runtime/protocol maintenance is acceptable?
+- Analyze real work sessions and sanitized skills to identify friction, successful recovery, steering/drift, ambiguity, and throwaway work rather than only hypothetical gaps.
+- Inspect Cloudflare's Agents SDK Pi harness, the official Cloudflare example, creator-shared examples, and community applications for reusable boundaries. Record stale notes/version differences.
+- How much custom UI/runtime/protocol maintenance is justified, and what existing component can be reused?
 
 ## Required design boundaries, whichever option wins
 
-Separate project/ensemble identity, role identity, conversation lifetime, execution-task ownership, worktree write ownership, and human approval authority. Define authoritative state and how external artifacts are reconciled. Define peer message contracts and limits. Define pause/stop semantics before callback automation. Choose a recoverable migration path that preserves readable project knowledge.
+Separate project/ensemble identity, role identity, conversation lifetime, execution-task ownership, worktree write ownership, and human approval authority. Define authoritative state and how external artifacts are reconciled. Define peer message contracts and limits, including direct-steering updates to the driving agent and dependent-plan reconciliation. Define decision requests and affected-scope blocking for unresolved consequential ambiguity. Define pause/stop semantics before callback automation. Choose a recoverable migration path that preserves readable project knowledge.
 
-**Next gate:** prepare a concrete proposal, evidence-backed capability matrix, and high-risk experiment results; then explicitly announce readiness for Astra review before product implementation.
+**Review milestone:** prepare the concrete proposal, capability matrix, and high-risk evidence, then explicitly highlight the Astra handoff. Manual Pi/Markdown coordination is the bootstrap path; later the runtime should support the exchange. Review consequential architecture before committing to it; do not freeze ordinary documentation or bounded evidence-gathering spikes. See [Astra brief](../project/reviews/astra-brief.md).

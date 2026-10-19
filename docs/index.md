@@ -1,10 +1,12 @@
 # Documentation index
 
-- `index.md` — navigation for this documentation tree.
-- `requirements.md` — initial behavior and safety requirements extracted from the legacy workflow.
-- `architecture-options.md` — candidate integration surfaces and the questions separating them.
-- `progress.md` — milestone log, current state, and next-session handoff.
-- `reference/` — sanitized legacy workflow source (`pi-setup-legacy.txt`).
-- `research/` — plan, source register, initial upstream findings, and the active Jev research track (`jev.md`).
-- `decisions/` — decision process and accepted decisions, when available.
-- `reviews/` — independent review briefs and eventual review results.
+Current product knowledge, not the development log. See [the tracker](../project/README.md) for work in progress and evidence/history.
+
+- [Requirements](requirements.md) — intended behavior and confirmed operator constraints.
+- [Architecture direction and alternatives](architecture-options.md) — preferred host/client direction and alternatives.
+- [Pi Durable explained](pi-durable.md) — concepts, diagrams, and durability boundaries.
+- [Project structure](project-structure.md) — docs versus tracking and selective reading.
+- [Decision models](decision-models.md) — selected Jev integration, secure access, and use policy.
+- [Observability](observability.md) — runtime-independent measurement and outcome correlation.
+- [Reference](reference/index.md) — sanitized source workflows.
+- `index.md` — this navigation map.
