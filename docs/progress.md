@@ -27,6 +27,13 @@ Research scaffold and initial upstream orientation. No runtime implemented, depe
 - Astra will initially be a separate Pi session using shared Markdown review artifacts. Added an explicit review protocol and a proposed focused high-thinking pass; exact model/levels are unconfirmed.
 - Added the active Jev research track, including codemode, labeled evaluation, privacy, and budget requirements. Installed docs describe native Jev classifier support; no integration or calls have occurred. Missing catalog pricing may appear as zero cost and must not be mistaken for free service.
 
+### 2026-10-19 — Public scaffold published
+
+- Created and pushed the public repository: https://github.com/gvbgduh/pi-ensemble (`main`).
+- Verified local Markdown links, clean diff whitespace, and exclusion of private imports; a limited credential-pattern scan found no matches. This is not a comprehensive security audit.
+- Original legacy export and upstream research cache remain ignored and were not committed. Only the sanitized workflow reference was published.
+- No license selected yet, no application/runtime code shipped, and no global Pi settings changed.
+
 ## Next session
 
 1. Read `README.md`, this file, requirements, initial findings, and the source register.
