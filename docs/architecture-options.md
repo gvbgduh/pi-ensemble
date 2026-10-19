@@ -1,6 +1,6 @@
 # Architecture options
 
-Status: C is the preferred direction, supported by the operator; D is a useful optional client on top. The detailed architecture has not been reviewed or implemented. A/B remain comparison and migration baselines, not equal-priority product destinations.
+Status: C is the preferred direction, supported by the operator; D is a useful optional client on top. A [concrete proposal](design.md) and [implementation plan](../project/implementation-plan.md) are ready for Astra review; detailed architecture has not been approved or implemented. A/B remain comparison and migration baselines, not equal-priority product destinations.
 
 ## A. Keep Pi CLI peers; improve the current packages
 

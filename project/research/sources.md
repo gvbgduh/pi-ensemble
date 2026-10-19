@@ -2,6 +2,10 @@
 
 Access date: 2026-10-19. Documentation/source reading is not a successful integration test. Follow latest upstream as requested, while recording the exact inspected SHA for reproducibility; `main` snapshots are not selected runtime dependency versions.
 
+## Bounded completion and execution limits
+
+Official normative/source/test inspection is recorded in [Durable findings](durable-source-findings.md). Latest legacy-package, Cloudflare and selected community comparison is recorded in [ecosystem findings](ecosystem-source-findings.md), with exact paths and SHAs. These complete the bounded design-research assignment, not exhaustive ecosystem/security review. No upstream tests, builds, demos, recovery or sandbox experiments ran. Selected released dependency compatibility is an M0 implementation gate.
+
 ## Official Pi
 
 Repository: https://github.com/earendil-works/pi
@@ -30,7 +34,7 @@ Operator confirmed these package identities and requested latest, not an audit b
 | --- | --- | --- |
 | S6 | [pi-subagents README](https://github.com/nicobailon/pi-subagents/blob/95683a4427e1e4af8de03f1a9ca03ec4c2799b73/README.md) | `95683a4427e1e4af8de03f1a9ca03ec4c2799b73`; README read in full. |
 | S7 | [Subagents tool reference](https://github.com/nicobailon/pi-subagents/blob/95683a4427e1e4af8de03f1a9ca03ec4c2799b73/docs/tool-reference.md) | Same revision; read in full. Documents retained-child resume and steering/receipt/eligibility boundaries; not run or source-audited. |
-| S8 | [pi-intercom README](https://github.com/nicobailon/pi-intercom/blob/ddf288186d4c40b8a54fbe8c0d136cbe4893a032/README.md) | `ddf288186d4c40b8a54fbe8c0d136cbe4893a032`; read in full after continuation. Implementation/tests pending. |
+| S8 | [pi-intercom README](https://github.com/nicobailon/pi-intercom/blob/ddf288186d4c40b8a54fbe8c0d136cbe4893a032/README.md) | `ddf288186d4c40b8a54fbe8c0d136cbe4893a032`; docs and selected broker/receipt/mailbox source/tests inspected; tests unrun. |
 
 The operator reports follow-up friction after delegated work completes. Current docs describe revival from a persisted session file, distinct from keeping the same live child. Treat the historical experience as evidence of a problem to understand, not proof that latest packages erase all context.
 
@@ -50,9 +54,9 @@ Reusable documented direction: Pi owns admission/execution/recovery; SDK owns st
 ## Creator and community examples
 
 - Creator-posted Slack links/excerpts: operator can supply; not accessible or reviewed here yet.
-- https://github.com/disler/durable-pi — discovered, not reviewed.
-- https://github.com/TannerMidd/pi-pocket — discovered, not reviewed.
-- https://github.com/thruwire/foreman — discovered, not reviewed.
+- https://github.com/disler/durable-pi — docs/app contracts inspected at `37165c619573dbaf425463038bbffecfe576beec`; not full source audit.
+- https://github.com/TannerMidd/pi-pocket — selected architecture/attach/linked-session/auth source/tests inspected at `26542deded0123d6b217828ed2f71f566d9a7a19`; unrun, not a security audit.
+- https://github.com/thruwire/foreman — deferred; bounded comparison already covers attach/control boundary. Not required breadth before first design review.
 
 Pick implementations that answer a concrete design question; do not install/reuse them merely because they mention Durable.
 

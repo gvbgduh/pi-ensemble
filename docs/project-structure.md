@@ -19,6 +19,7 @@ pi-ensemble/
 │   ├── index.md
 │   ├── requirements.md
 │   ├── architecture-options.md
+│   ├── design.md             # concrete proposed host/client contracts, review status explicit
 │   ├── pi-durable.md         # substrate explained, with diagrams
 │   ├── project-structure.md  # this convention
 │   ├── context-lifecycle.md  # context budgets and proposed rollover contract
@@ -37,6 +38,7 @@ pi-ensemble/
     ├── tickets.md            # issue map, including explicitly untracked work
     ├── prs.md                # GitHub pull-request/change map
     ├── continuation-prompt.md# compact current handoff
+    ├── implementation-plan.md# phased deliverables and acceptance gates
     ├── research/             # plans, source register, analysis briefs
     ├── findings/             # dated evidence and experiment outcomes
     ├── reports/              # status snapshots and imported safe reports

@@ -4,7 +4,7 @@
 
 Deliver a functioning Pi Ensemble runtime: persistent agents, attachable interactive clients, independent contexts, coordinated autonomy, direct human access, and inspectable project state. Research, documentation, experiments, and review serve delivery; they are not the product.
 
-Current phase: design and source research. Do not confuse planned behavior with implemented guarantees, or change global Pi settings/install services merely as a side effect of documentation work. Treat metaphors as shorthand for intent, not extra literal architecture requirements.
+Current phase: concrete design/plan and independent review; bounded source/report intake is recorded, but runtime experiments are unrun. Do not confuse planned behavior with implemented guarantees, or change global Pi settings/install services merely as a side effect of documentation work. Treat metaphors as shorthand for intent, not extra literal architecture requirements.
 
 ## Read with purpose
 
@@ -14,7 +14,7 @@ Follow [project structure and reading protocol](docs/project-structure.md).
 2. Read `docs/requirements.md`, relevant current design docs, and relevant open questions/accepted decisions.
 3. Load only the research, findings, reviews, and history needed for the task. Do not dump the entire tracker or every transcript into every agent's context.
 
-`docs/` describes the current best understanding. `project/` tracks work, unresolved choices, evidence, reviews, and chronology. Neither duplicates the other. Work-setup analysis briefs and inputs live under `project/research/`; public reference material belongs in `docs/reference/` after sanitization.
+`docs/` describes the current best understanding. `project/` tracks work, unresolved choices, evidence, reviews, and chronology. Neither duplicates the other. Work-setup analysis briefs live under `project/research/`; imported public-safe findings reports live under `project/reports/` with intake caveats in `project/findings/`. Public reference material belongs in `docs/reference/` after sanitization.
 
 ## Maintain state in the same milestone
 

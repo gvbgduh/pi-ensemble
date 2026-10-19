@@ -8,10 +8,10 @@ Deliver a functioning runtime; current phase is evidence intake and concrete des
 | --- | --- | --- |
 | Product/tracker foundation | Updated with operator review | Keep README, AGENTS, docs and tracker aligned |
 | Work-setup evidence | Correct Argon report received; orchestrator and Astra read all 716 lines | Use chronological findings with intake caveats; no raw-corpus verification |
-| Substrate/ecosystem | Durable source/spec/test inspection integrated; Luna researching ecosystem (ECOSYSTEM-01 rev1) | Integrate latest-package/community comparison, then concrete design/plan |
-| Host/client design | C preferred; D optional; context-rollover proposal added | Concrete ownership, attachment, steering/ambiguity and context-replacement contracts |
+| Substrate/ecosystem | Bounded official + latest-package/Cloudflare/community source inspection integrated | Select released dependency set and run compatibility/fault gates after review; tests unrun |
+| Host/client design | Concrete design v1 + phased implementation plan written | Astra review of pinned proposal, author dispositions and operator acceptance |
 | Jev and measurement | Direct TypeSafe smoke passed: three synthetic calls, usage/cost estimate recorded | Continue suitable typed use; framing tests and reusable instrumentation remain pending |
-| Independent review | Brief expanded; no review yet | Highlight the Astra milestone when concrete design/evidence are ready |
+| Independent review | Report intake complete; concrete architecture review ready | Send pinned design/plan to live Astra; separate findings/disposition |
 
 ## Milestone log
 
@@ -99,6 +99,13 @@ Deliver a functioning runtime; current phase is evidence intake and concrete des
 - Operator corrected the report filename to `project/reports/work-setup-insights.md`; imported unchanged and indexed. Orchestrator and Astra independently read all 716 lines. Intake assessment and Astra findings preserve chronology and disclose denominator, approval-status, classifier, causal and requirement-ID caveats; raw corpus was not imported/reverified.
 - Integrated Luna's official normative/source/test findings as `2ebd87b` (UPSTREAM-01 rev1). Latest HEAD differs in selected implementation; no upstream tests or runtime experiments run. Durable supplies persistence/scheduling/projection, not a daemon, authorization, cross-process writer lock, or safe external exactly-once effects.
 - Assigned Luna bounded ECOSYSTEM-01 rev1 follow-up in its isolated worktree for latest-package, Cloudflare and selected community source comparison. Concrete design and plan remain next, not implemented/accepted architecture.
+
+### 2026-10-19 — Source comparison and concrete proposal v1
+
+- Integrated Luna ECOSYSTEM-01 rev1 as `91e58c9`: latest retained-child resume, broker receipt/mailbox limits, Cloudflare single replay owner, and selected Pi Pocket/durable-pi attach/control patterns. Tests/builds/demos remain unrun; exact pins and gaps are preserved.
+- Wrote `docs/design.md` and `project/implementation-plan.md` v1. Proposed one local Durable-backed host, private attach protocol, explicit app/native admission bridge, correlated steering holds, effect/authority separation, quiescent context rollover and staged M0–M5 delivery.
+- First useful slice is intentionally tool-restricted persistence/attachment/peer control; no false promise of safe general shell. Released dependency/auth compatibility, store lock, portable sandbox, admission/cutover fault tests and operator acceptance remain gates.
+- Concrete proposal is ready for pinned Astra architecture review. No runtime code or recovery experiment claimed; review findings/dispositions must remain independent of operator acceptance.
 
 ## Handoff
 

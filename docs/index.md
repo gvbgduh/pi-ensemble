@@ -4,6 +4,7 @@ Current product knowledge, not the development log. See [the tracker](../project
 
 - [Requirements](requirements.md) — intended behavior and confirmed operator constraints.
 - [Architecture direction and alternatives](architecture-options.md) — preferred host/client direction and alternatives.
+- [Design proposal v1](design.md) — concrete host/client, admission, steering, effect, ownership and context contracts for review; not implemented.
 - [Pi Durable explained](pi-durable.md) — concepts, diagrams, and durability boundaries.
 - [Project structure](project-structure.md) — document outlines, docs versus tracking, layering, selective reading, and maintenance.
 - [Context lifecycle](context-lifecycle.md) — proposed budget, wind-down, verified handoff, and routing/incarnation replacement.

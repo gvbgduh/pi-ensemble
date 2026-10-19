@@ -1,6 +1,6 @@
 # Astra design-review brief
 
-Status: reusable review brief; no review has been requested or performed. Astra is used through the operator's OpenAI subscription inside Pi. Exact model launch ID is not assumed from the nickname.
+Status: work-report intake completed independently; design v1 and implementation plan are ready for a separately pinned architecture review. Astra is the live `pi-ensemble-001-adviser` session (`gpt-6-astra` per intercom roster), through the operator's subscription. Findings are not operator acceptance.
 
 ## Goal
 
@@ -23,9 +23,9 @@ Initially another Pi session reviews shared versioned Markdown. Once Ensemble ca
 ## Read
 
 1. `README.md`, `docs/requirements.md`, and `docs/project-structure.md`.
-2. Concrete proposal revision and acceptance criteria (to be written).
+2. `docs/design.md` and `project/implementation-plan.md` at the requested Git revision, with their acceptance gates.
 3. `docs/pi-durable.md`, `docs/architecture-options.md`, `docs/context-lifecycle.md`, `docs/task-contract.md`, `docs/decision-models.md`, `docs/observability.md`.
-4. `project/research/sources.md`, relevant findings/experiments, and any received work-setup report.
+4. `project/research/sources.md`, `durable-source-findings.md`, `ecosystem-source-findings.md`, and relevant findings. `project/reports/work-setup-insights.md` must be consumed in full (already done in EVIDENCE-REVIEW-01); retain `astra-work-report-intake-v1.md` caveats. No raw-corpus verification or runtime fault experiment has run.
 5. `docs/reference/pi-setup-legacy.md` and sanitized skill contracts as needed.
 
 Do not request raw private sessions or credentials. Missing public-safe evidence is a limitation to disclose, not a reason to export secrets.

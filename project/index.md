@@ -8,6 +8,7 @@
 - `tickets.md` — issue map; no invented external IDs.
 - `prs.md` — GitHub pull-request/change map and dependency topology.
 - `continuation-prompt.md` — compact current handoff.
+- [Implementation plan](implementation-plan.md) — proposed phased delivery and acceptance gates, paired with docs/design.md.
 - `research/` — research plan, sources, initial findings, work-setup analysis brief.
 - `findings/` — dated evidence and experiment outcomes.
 - `reports/` — safe imported analysis and milestone snapshots.
