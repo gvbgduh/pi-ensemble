@@ -34,7 +34,7 @@ When an ambiguity or consequential decision cannot be resolved from evidence and
 
 The preferred direction is a **Pi Durable host with attachable clients**. A thin Pi CLI extension could be an additional client later, not the owner of agent lifetime. We are studying official and community implementations and the existing workflow before finalizing the host design.
 
-Work-session report intake and bounded upstream/ecosystem source inspection are complete, with evidence caveats and unrun tests explicit. Astra reviewed concrete design v1; v1.1 and its phased plan address four mechanical contract findings. Operator acceptance and runtime proof gates remain pending. Start with a recovery-tested vertical slice and grow it into a functioning runtime. Manual review coordination is a bootstrap mechanism; the runtime should eventually support the same review exchange itself.
+Work-session report intake and bounded upstream/ecosystem source inspection are complete, with evidence caveats and unrun tests explicit. Astra reviewed concrete design v1; v1.1 and its phased plan address four mechanical contract findings. Astra’s focused amendment check found no remaining high-risk contract blocker. Operator acceptance and runtime proof gates remain pending. Start with a recovery-tested vertical slice and grow it into a functioning runtime. Manual review coordination is a bootstrap mechanism; the runtime should eventually support the same review exchange itself.
 
 ## License
 

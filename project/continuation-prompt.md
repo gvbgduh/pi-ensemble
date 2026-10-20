@@ -4,7 +4,7 @@
 
 Goal: deliver a functioning local-first persistent multi-agent host with attachable clients. Repo `~/Projects/pi-ensemble`, public remote `https://github.com/gvbgduh/pi-ensemble`. Read `AGENTS.md`, README/current progress table, then only task-relevant evidence. Do not import the old conversation or whole tracker.
 
-**Current state:** bounded report/source research complete; no runtime or recovery/sandbox experiments. Direct TypeSafe Jev codemode smoke succeeded. Astra reviewed proposal `ab0d906`; findings integrated as `618a4b3`. Design/plan **v1.1** and separate author disposition address AD1–AD4; implementation tests and **operator acceptance remain pending**. No implementation authorization is inferred from review.
+**Current state:** bounded report/source research complete; no runtime or recovery/sandbox experiments. Direct TypeSafe Jev codemode smoke succeeded. Astra reviewed proposal `ab0d906`; findings integrated as `618a4b3`. Design/plan **v1.1** and separate author disposition address AD1–AD4. Astra's focused follow-up at `8f14c9d` found no residual high-risk contract blocker; see `project/reviews/astra-design-v1-follow-up.md`. Implementation tests and **operator acceptance remain pending**. No implementation authorization is inferred from review.
 
 ### Settled constraints
 
@@ -26,7 +26,7 @@ Goal: deliver a functioning local-first persistent multi-agent host with attacha
 Live bootstrap aliases: `pi-ensemble-001-orchestrator`, Luna `pi-ensemble-001-worker`, Astra `pi-ensemble-001-adviser`; list before reusing session IDs. Luna's source tasks UPSTREAM-01/ECOSYSTEM-01 are complete/integrated; no active implementation task. Last observed Luna context ~183K; do not assign broad reads near wind-down.
 
 1. Read `project/reviews/astra-design-v1-findings.md` and separate `astra-design-v1-disposition.md` as needed. AD1: serialized delivery claim/pin/immutable native draft + wake recovery. AD2: actual startup execution gate—native submit/wait implicitly resume; withholding explicit resume is insufficient. AD3: host-death orphan containment proof before new writer. AD4: revisioned per-steering reconciliation/release, not generic ack flag.
-2. `docs/design.md` + `project/implementation-plan.md` v1.1 contain amendments and M0–M5 gates. Get focused Astra check only for unresolved high-risk amendment, then ask operator acceptance/authorization for **M0-01 only**. No claim tests passed from a prose amendment.
+2. `docs/design.md` + `project/implementation-plan.md` v1.1 contain amendments and M0–M5 gates. Focused Astra check is complete with no residual contract blocker. Ask operator acceptance/authorization for **M0-01 only**; no repeat proposal review is needed absent new high-risk evidence. No claim tests passed from a prose amendment.
 3. Proposed M0-01: isolated credential-free fake-provider native/app bridge, control/implicit-resume gate, crash barriers/dedupe and exclusive-lock proof against compatible released pins. Native auth feasibility separate; do not copy tokens. Report unsupported API/platform/provider as blocker rather than invent another scheduler or hidden fallback.
 4. Restricted M1 peers need minimum stop/restart and aggregate-next-request budget safety. General shell/mutation waits for M3 demonstrated containment/approval/ownership. M4 readiness binds manifest hash/full revision vector, quiescence and input races. Scope/platform acceptance remains explicit.
 

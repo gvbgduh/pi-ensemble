@@ -11,7 +11,7 @@ Deliver a functioning runtime; current phase is evidence intake and concrete des
 | Substrate/ecosystem | Bounded official + latest-package/Cloudflare/community source inspection integrated | Select released dependency set and run compatibility/fault gates after review; tests unrun |
 | Host/client design | Design/plan v1.1 amend accepted AD1–AD4; proof gates unrun | Focused amendment check and operator acceptance of bounded M0 scope |
 | Jev and measurement | Direct TypeSafe smoke passed: three synthetic calls, usage/cost estimate recorded | Continue suitable typed use; framing tests and reusable instrumentation remain pending |
-| Independent review | Findings integrated as `618a4b3`; separate author disposition written | Confirm no unresolved high-risk amendment; request operator acceptance, not implied authorization |
+| Independent review | Astra v1.1 follow-up complete at `8f14c9d`: no residual high-risk contract blocker | Operator acceptance and bounded M0-01 authorization; implementation proof gates remain open |
 
 ## Milestone log
 
@@ -118,6 +118,11 @@ Deliver a functioning runtime; current phase is evidence intake and concrete des
 - Integrated independent ASTRA-DESIGN-01 findings as `618a4b3`, preserving reviewed proposal `ab0d906`. Direction C and restricted M0/M1 are conditionally supported; review is not operator acceptance.
 - Accepted AD1–AD4 and amended design/plan v1.1: serialized delivery claim/immutable draft/wake recovery, actual execution-disabled startup despite implicit resume APIs, crash-surviving executor containment/orphan reconciliation, and revisioned steering release. AG1–AG3 remain explicit phase-specific proof gates.
 - Separate author disposition records changes, smallest tests and limits. No tests/runtime implementation were run. Proposed next authorized scope is M0-01 fake-provider bridge/execution-gate/lock proof, not general mutation or service installation.
+
+### 2026-10-20 — Focused amendment review closed
+
+- Astra reviewed only the proposal/plan/disposition diff `ab0d906..8f14c9d` and found no residual high-risk contract blocker. Recorded attributed confirmation in `reviews/astra-design-v1-follow-up.md`; original findings/disposition preserved.
+- V1.1 is ready for operator acceptance of direction/scope and separate bounded M0-01 authorization. No implementation or tests occurred; failure of native execution-gate feasibility must stop/revisit, not bypass controls or add a scheduler.
 
 ## Handoff
 
