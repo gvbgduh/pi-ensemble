@@ -2,16 +2,16 @@
 
 ## Current phase and workstreams
 
-Deliver a functioning runtime; current phase is evidence intake and concrete design. Codemode and tool search are available. Direct TypeSafe Jev authentication and three synthetic calls succeeded; see [smoke evidence](findings/2026-10-19-jev-smoke.md). No runtime, portable instrumentation, recovery experiments, or Astra design review yet.
+Deliver a functioning runtime; current phase is evidence intake and concrete design. Codemode and tool search are available. Direct TypeSafe Jev authentication and three synthetic calls succeeded; see [smoke evidence](findings/2026-10-19-jev-smoke.md). Astra reviewed v1; v1.1 amends four mechanical contracts. No runtime, portable instrumentation, or recovery experiments; operator acceptance pending.
 
 | Stream | State | Next |
 | --- | --- | --- |
 | Product/tracker foundation | Updated with operator review | Keep README, AGENTS, docs and tracker aligned |
 | Work-setup evidence | Correct Argon report received; orchestrator and Astra read all 716 lines | Use chronological findings with intake caveats; no raw-corpus verification |
 | Substrate/ecosystem | Bounded official + latest-package/Cloudflare/community source inspection integrated | Select released dependency set and run compatibility/fault gates after review; tests unrun |
-| Host/client design | Concrete design v1 + phased implementation plan written | Astra review of pinned proposal, author dispositions and operator acceptance |
+| Host/client design | Design/plan v1.1 amend accepted AD1–AD4; proof gates unrun | Focused amendment check and operator acceptance of bounded M0 scope |
 | Jev and measurement | Direct TypeSafe smoke passed: three synthetic calls, usage/cost estimate recorded | Continue suitable typed use; framing tests and reusable instrumentation remain pending |
-| Independent review | ASTRA-DESIGN-01 rev1 requested at `ab0d906`; live Astra assigned isolated findings | Await findings, author disposition and operator acceptance; no implementation authorized |
+| Independent review | Findings integrated as `618a4b3`; separate author disposition written | Confirm no unresolved high-risk amendment; request operator acceptance, not implied authorization |
 
 ## Milestone log
 
@@ -112,6 +112,12 @@ Deliver a functioning runtime; current phase is evidence intake and concrete des
 - Astra correlated a direct operator clarification back to the orchestrator during pinned review. Argon's report is one model's analysis; independent artifact intake is not a replicated raw-corpus analysis.
 - Recorded firsthand operator observations separately: earlier single Opus 5 ~$120–130/day versus later Opus 5.5 worker ~$20–30/day, Argon ~$10–15/day (different billing basis), flat-rate Kimi and Fable ~$7–12/day; lower mental load and roughly twice-faster results. Statistical/telemetry caveats qualify attribution, not dismiss experience. See the dated finding.
 - Proposal `ab0d906` remains unchanged during Astra review; no implementation authority is inferred.
+
+### 2026-10-20 — Astra findings and v1.1 contract disposition
+
+- Integrated independent ASTRA-DESIGN-01 findings as `618a4b3`, preserving reviewed proposal `ab0d906`. Direction C and restricted M0/M1 are conditionally supported; review is not operator acceptance.
+- Accepted AD1–AD4 and amended design/plan v1.1: serialized delivery claim/immutable draft/wake recovery, actual execution-disabled startup despite implicit resume APIs, crash-surviving executor containment/orphan reconciliation, and revisioned steering release. AG1–AG3 remain explicit phase-specific proof gates.
+- Separate author disposition records changes, smallest tests and limits. No tests/runtime implementation were run. Proposed next authorized scope is M0-01 fake-provider bridge/execution-gate/lock proof, not general mutation or service installation.
 
 ## Handoff
 

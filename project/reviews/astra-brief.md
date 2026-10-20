@@ -1,6 +1,6 @@
 # Astra design-review brief
 
-Status: work-report intake completed independently; design v1 and implementation plan are ready for a separately pinned architecture review. Astra is the live `pi-ensemble-001-adviser` session (`gpt-6-astra` per intercom roster), through the operator's subscription. Findings are not operator acceptance.
+Status: work-report intake and design v1 review completed independently. See findings and separate author disposition; v1.1 amendments need only unresolved high-risk follow-up, not repeated full review. Operator acceptance pending. Astra is the live `pi-ensemble-001-adviser` session (`gpt-6-astra` per intercom roster), through the operator's subscription. Findings are not operator acceptance.
 
 ## Goal
 

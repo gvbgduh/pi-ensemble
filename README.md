@@ -19,7 +19,7 @@ When an ambiguity or consequential decision cannot be resolved from evidence and
 - [Pi Durable explained](docs/pi-durable.md) — concepts, diagrams, and the attachable-runtime analogy
 - [Requirements](docs/requirements.md) — the current behavioral target
 - [Architecture direction and alternatives](docs/architecture-options.md)
-- [Concrete design proposal](docs/design.md) · [Implementation plan](project/implementation-plan.md) — v1 for independent review, not implemented guarantees
+- [Concrete design proposal](docs/design.md) · [Implementation plan](project/implementation-plan.md) — v1.1 amended after independent review; operator acceptance pending, not implemented guarantees
 - [Project structure and reading protocol](docs/project-structure.md)
 - [Context lifecycle](docs/context-lifecycle.md) — budgets, wind-down, handoff, and stable-address replacement (proposed)
 - [Bounded task contract](docs/task-contract.md) — project substrate, continuation tasks, horizontal workers, and routing (proposed)
@@ -34,7 +34,7 @@ When an ambiguity or consequential decision cannot be resolved from evidence and
 
 The preferred direction is a **Pi Durable host with attachable clients**. A thin Pi CLI extension could be an additional client later, not the owner of agent lifetime. We are studying official and community implementations and the existing workflow before finalizing the host design.
 
-Work-session report intake and bounded upstream/ecosystem source inspection are complete, with evidence caveats and unrun tests explicit. Concrete design v1 and a phased implementation plan are ready for independent Astra review and operator acceptance. Start with a recovery-tested vertical slice and grow it into a functioning runtime. Manual review coordination is a bootstrap mechanism; the runtime should eventually support the same review exchange itself.
+Work-session report intake and bounded upstream/ecosystem source inspection are complete, with evidence caveats and unrun tests explicit. Astra reviewed concrete design v1; v1.1 and its phased plan address four mechanical contract findings. Operator acceptance and runtime proof gates remain pending. Start with a recovery-tested vertical slice and grow it into a functioning runtime. Manual review coordination is a bootstrap mechanism; the runtime should eventually support the same review exchange itself.
 
 ## License
 
